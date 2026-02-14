@@ -65,7 +65,7 @@ const Navbar = () => {
             +254 700 000 000
           </a>
           <Button asChild>
-            <Link to="/contact">Get a Quote</Link>
+            <Link to="/request-quote">Get a Quote</Link>
           </Button>
         </div>
 
@@ -97,7 +97,7 @@ const Navbar = () => {
           ))}
           <div className="mt-4 border-t border-nav-foreground/10 pt-4">
             <Button asChild className="w-full">
-              <Link to="/contact">Get a Free Quote</Link>
+              <Link to="/request-quote">Get a Free Quote</Link>
             </Button>
           </div>
         </nav>
