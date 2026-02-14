@@ -100,9 +100,40 @@ const Contact = () => {
                     </select>
                   </div>
                 </div>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="budget" className="mb-1.5 block text-sm font-medium">Budget Range (KES)</label>
+                    <select id="budget" name="budget" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                      <option value="">Select your budget</option>
+                      <option>Under 50,000</option>
+                      <option>50,000 – 100,000</option>
+                      <option>100,000 – 250,000</option>
+                      <option>250,000 – 500,000</option>
+                      <option>500,000 – 1,000,000</option>
+                      <option>1,000,000 – 5,000,000</option>
+                      <option>Above 5,000,000</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="timeline" className="mb-1.5 block text-sm font-medium">Preferred Timeline</label>
+                    <select id="timeline" name="timeline" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                      <option value="">Select timeline</option>
+                      <option>Urgent (within 1 week)</option>
+                      <option>1 – 2 weeks</option>
+                      <option>1 month</option>
+                      <option>2 – 3 months</option>
+                      <option>Flexible / No rush</option>
+                    </select>
+                  </div>
+                </div>
                 <div>
-                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium">Message *</label>
-                  <Textarea id="message" name="message" placeholder="Tell us about your project..." rows={5} required maxLength={2000} />
+                  <label htmlFor="scope" className="mb-1.5 block text-sm font-medium">What do you need done? *</label>
+                  <Textarea id="scope" name="scope" placeholder="Describe the work needed — e.g. type of equipment, number of units, location, size of space, any specific requirements..." rows={4} required maxLength={2000} />
+                </div>
+                <div>
+                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium">Additional Notes</label>
+                  <Textarea id="message" name="message" placeholder="Any other details, preferences, or questions..." rows={3} maxLength={2000} />
                 </div>
                 <Button type="submit" size="lg" disabled={loading} className="w-full sm:w-auto">
                   {loading ? "Sending..." : <><Send className="mr-2 h-4 w-4" /> Send Message</>}
