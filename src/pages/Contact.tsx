@@ -36,7 +36,7 @@ const Contact = () => {
             <h3 className="text-xl font-bold">Contact Information</h3>
             <p className="text-muted-foreground">We'd love to hear from you. Reach out via any of the channels below.</p>
             {[
-              { icon: MapPin, label: "Address", value: "owin Shopping Arcade, Ruai Eastern Bypass\nNairobi, Kenya" },
+              { icon: MapPin, label: "Address", value: "Jowin Shopping Arcade, Ruai Eastern Bypass\nNairobi, Kenya" },
               { icon: Phone, label: "Phone", value: "+254 786 839 306" },
               { icon: Mail, label: "Email", value: "info@barcoldrefrigerationltd.co.ke" },
               { icon: Clock, label: "Working Hours", value: "Mon–Fri: 8AM – 6PM\nSat: 9AM – 1PM" },
@@ -85,7 +85,7 @@ const Contact = () => {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="phone" className="mb-1.5 block text-sm font-medium">Phone</label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+254 786 839 306" maxLength={20} />
+                    <Input id="phone" name="phone" type="tel" placeholder="+254 700 000 000" maxLength={20} />
                   </div>
                   <div>
                     <label htmlFor="service" className="mb-1.5 block text-sm font-medium">Service Needed</label>
