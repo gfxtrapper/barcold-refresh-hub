@@ -56,8 +56,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-nav-foreground/60">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                Jowin Shopping Arcade
-Ruai Eastern Bypass, Nairobi
+                Jowin Shopping Arcade, Ruai Eastern Bypass, Nairobi
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
