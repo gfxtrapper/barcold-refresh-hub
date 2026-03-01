@@ -19,10 +19,10 @@ const About = () => (
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h3 className="text-2xl font-bold">Our Story</h3>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Founded in 2003, Barcold Refrigeration Ltd started as a small repair shop in Nairobi's Industrial Area. Today, we are one of East Africa's leading refrigeration, air conditioning, and HVAC solutions providers, serving over 500 commercial and industrial clients across Kenya.
+            Founded in 2003, Barcold Refrigeration Ltd started as a small repair shop in Nairobi's Industrial Area. Today, we supply a comprehensive range of compressors (GMCC, HITACHI), monoblock condensing units, cold-room systems, control systems, and HVAC accessories for residential, commercial, and industrial applications across East Africa.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Our team of certified engineers and technicians brings decades of combined experience, ensuring every project meets international standards of quality and reliability.
+            Our team of certified engineers and technicians brings decades of combined experience, ensuring every installation — from a 7 m³ cold room to a full HVAC plant — meets international standards of quality and reliability.
           </p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="grid grid-cols-2 gap-4">

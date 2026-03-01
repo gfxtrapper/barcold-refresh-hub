@@ -12,12 +12,12 @@ import projectWarehouse from "@/assets/project-warehouse.jpg";
 import projectHotel from "@/assets/project-hotel.jpg";
 
 const services = [
-  { icon: Snowflake, title: "Commercial Refrigeration", desc: "Display cases, walk-in coolers, and industrial refrigeration systems for businesses." },
-  { icon: Wind, title: "Air Conditioning", desc: "Complete AC installation, servicing, and repair for commercial and residential spaces." },
-  { icon: ThermometerSnowflake, title: "Cold Room Construction", desc: "Custom-built cold rooms and blast freezers for food storage and processing." },
-  { icon: Wrench, title: "Maintenance & Repairs", desc: "Preventive maintenance and 24/7 emergency repair services to keep you running." },
-  { icon: Building2, title: "HVAC Systems", desc: "Full heating, ventilation, and air conditioning solutions for large-scale projects." },
-  { icon: ShieldCheck, title: "Energy Audits", desc: "Optimize your cooling systems for maximum efficiency and lower energy costs." },
+  { icon: Snowflake, title: "Compressors & Condensing Units", desc: "GMCC & HITACHI rotary, scroll, and inverter compressors plus monoblock condensing units for every application." },
+  { icon: Wind, title: "Air Conditioning Systems", desc: "Universal AC control systems, remote controls, split-system accessories, and air curtains." },
+  { icon: ThermometerSnowflake, title: "Cold Room Solutions", desc: "Variable-temperature monoblock units, condensers, and cold-room systems from 7 m³ to 120 m³." },
+  { icon: Wrench, title: "Parts & Accessories", desc: "Thermostats, pressure controls, brackets, anti-vibration mountings, and condensate pumps." },
+  { icon: Building2, title: "HVAC & Ventilation", desc: "Complete heating, ventilation, and air conditioning solutions for commercial and industrial facilities." },
+  { icon: ShieldCheck, title: "Service & Maintenance", desc: "Preventive maintenance, 24/7 emergency repairs, energy audits, and system commissioning." },
 ];
 
 const stats = [
@@ -63,7 +63,7 @@ const Index = () => {
               <span className="text-gradient">Power Business</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-nav-foreground/70 md:text-xl">
-              From supermarket refrigeration to industrial cold rooms and HVAC systems — we design, install, and maintain cooling solutions that keep Kenya moving.
+              Compressors, condensing units, cold-room systems, AC controls &amp; HVAC accessories — we supply, install, and maintain cooling solutions that keep Kenya moving.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" asChild>
