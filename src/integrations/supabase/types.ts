@@ -14,7 +14,69 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      quote_requests: {
+        Row: {
+          additional_notes: string | null
+          budget: string | null
+          company: string | null
+          created_at: string
+          email: string
+          existing_system: string | null
+          how_heard: string | null
+          id: string
+          location: string | null
+          name: string
+          number_of_units: string | null
+          phone: string | null
+          project_description: string
+          property_type: string | null
+          services: string[]
+          space_size: string | null
+          special_requirements: string | null
+          timeline: string | null
+        }
+        Insert: {
+          additional_notes?: string | null
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          email: string
+          existing_system?: string | null
+          how_heard?: string | null
+          id?: string
+          location?: string | null
+          name: string
+          number_of_units?: string | null
+          phone?: string | null
+          project_description: string
+          property_type?: string | null
+          services?: string[]
+          space_size?: string | null
+          special_requirements?: string | null
+          timeline?: string | null
+        }
+        Update: {
+          additional_notes?: string | null
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          email?: string
+          existing_system?: string | null
+          how_heard?: string | null
+          id?: string
+          location?: string | null
+          name?: string
+          number_of_units?: string | null
+          phone?: string | null
+          project_description?: string
+          property_type?: string | null
+          services?: string[]
+          space_size?: string | null
+          special_requirements?: string | null
+          timeline?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
