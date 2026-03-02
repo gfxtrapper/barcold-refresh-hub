@@ -1,8 +1,30 @@
 import { motion } from "framer-motion";
-import { Award, Users, Target, Eye } from "lucide-react";
+import { Award, Users, Package, Shield, Target, Eye } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
+
+// Animation constants
+const slideInFromLeft = {
+  initial: { opacity: 0, x: -20 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 },
+};
+
+const slideInFromBottom = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { delay, duration: 0.4 },
+});
+
+const scaleIn = {
+  initial: { opacity: 0, scale: 0.95 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
+  transition: { duration: 0.5 },
+};
 
 // Data for sections
 const missionVision = [
@@ -30,14 +52,14 @@ const whyChooseUs = [
     desc: "Trusted by Kenya's top retailers, hotels, hospitals, and food processors.",
   },
   {
+    icon: Package,
     title: "Genuine Parts",
     desc: "We use only original manufacturer parts for all installations and repairs.",
-    icon: Award,
   },
   {
+    icon: Shield,
     title: "Full Warranty",
     desc: "Comprehensive warranty coverage on all our installations and services.",
-    icon: Award,
   },
 ];
 
@@ -60,12 +82,7 @@ function StorySection() {
   return (
     <section className="section-padding">
       <div className="container-max grid items-center gap-12 lg:grid-cols-2">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <motion.div {...slideInFromLeft}>
           <h3 className="text-2xl font-bold">Our Story</h3>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Founded in 2003, Barcold Refrigeration Ltd started as a small repair shop in Nairobi's Industrial Area. Today, we supply a comprehensive range of compressors (GMCC, HITACHI), monoblock condensing units, cold-room systems, control systems, and HVAC accessories for residential, commercial, and industrial applications across East Africa.
@@ -74,13 +91,7 @@ function StorySection() {
             Our team of certified engineers and technicians brings decades of combined experience, ensuring every installation — from a 7 m³ cold room to a full HVAC plant — meets international standards of quality and reliability.
           </p>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 gap-4"
-        >
+        <motion.div {...scaleIn} className="grid grid-cols-2 gap-4">
           <img
             src={serviceMaintenance}
             alt="Barcold technician performing maintenance"
@@ -104,10 +115,7 @@ function MissionVisionSection() {
         {missionVision.map((item, i) => (
           <motion.div
             key={item.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1, duration: 0.4 }}
+            {...slideInFromBottom(i * 0.1)}
             className="rounded-xl bg-card p-8 shadow-sm"
           >
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -131,10 +139,7 @@ function WhyChooseUsSection() {
           {whyChooseUs.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.4 }}
+              {...slideInFromBottom(i * 0.08)}
               className="rounded-xl border bg-card p-6 text-center"
             >
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
