@@ -1,1 +1,15 @@
-domain: barcoldrefrigerationltd.co.ke
+---
+deployment:
+  targets:
+    production:
+      domain: barcoldrefrigerationltd.co.ke
+      path: public_html
+
+post_deploy:
+  - npm install
+  - npm run build
+  - cp -r dist/* public_html/
+  - find dist -name "*.js" -o -name "*.css" | xargs gzip -9k
+
+env:
+  - NODE_ENV=production
