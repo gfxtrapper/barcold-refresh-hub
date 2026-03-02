@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import SectionHeading from "@/components/SectionHeading";
+import { supabase } from "@/integrations/supabase/client";
 
 const steps = [
   { label: "Your Info", icon: User },
@@ -49,14 +50,36 @@ const RequestQuote = () => {
     return true;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const { error } = await supabase.from("quote_requests").insert({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim() || null,
+        company: form.company.trim() || null,
+        services: form.services,
+        property_type: form.propertyType || null,
+        location: form.location.trim() || null,
+        project_description: form.projectDescription.trim(),
+        space_size: form.spaceSize.trim() || null,
+        number_of_units: form.numberOfUnits.trim() || null,
+        existing_system: form.existingSystem || null,
+        special_requirements: form.specialRequirements.trim() || null,
+        budget: form.budget || null,
+        timeline: form.timeline || null,
+        how_heard: form.howHeard || null,
+        additional_notes: form.additionalNotes.trim() || null,
+      });
+      if (error) throw error;
       toast({ title: "Quote Request Submitted!", description: "Our team will review your project and get back to you within 24–48 hours with a detailed quote." });
       setCurrentStep(0);
       setForm({ name: "", email: "", phone: "", company: "", services: [], propertyType: "", location: "", projectDescription: "", spaceSize: "", numberOfUnits: "", existingSystem: "", specialRequirements: "", budget: "", timeline: "", howHeard: "", additionalNotes: "" });
-    }, 1500);
+    } catch {
+      toast({ title: "Submission Failed", description: "Something went wrong. Please try again or contact us directly.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const selectClass = "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
