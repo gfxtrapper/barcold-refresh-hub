@@ -72,6 +72,21 @@ const RequestQuote = () => {
         additional_notes: form.additionalNotes.trim() || null,
       });
       if (error) throw error;
+      // Fire-and-forget email notification (don't block the user)
+      supabase.functions.invoke("notify-quote", {
+        body: {
+          name: form.name.trim(),
+          email: form.email.trim(),
+          phone: form.phone.trim() || undefined,
+          company: form.company.trim() || undefined,
+          services: form.services,
+          propertyType: form.propertyType || undefined,
+          location: form.location.trim() || undefined,
+          projectDescription: form.projectDescription.trim(),
+          budget: form.budget || undefined,
+          timeline: form.timeline || undefined,
+        },
+      }).catch((err) => console.error("Notification failed:", err));
       toast({ title: "Quote Request Submitted!", description: "Our team will review your project and get back to you within 24–48 hours with a detailed quote." });
       setCurrentStep(0);
       setForm({ name: "", email: "", phone: "", company: "", services: [], propertyType: "", location: "", projectDescription: "", spaceSize: "", numberOfUnits: "", existingSystem: "", specialRequirements: "", budget: "", timeline: "", howHeard: "", additionalNotes: "" });
