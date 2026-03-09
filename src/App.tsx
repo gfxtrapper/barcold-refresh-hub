@@ -14,6 +14,7 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import RequestQuote from "./pages/RequestQuote";
 import NotFound from "./pages/NotFound";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
