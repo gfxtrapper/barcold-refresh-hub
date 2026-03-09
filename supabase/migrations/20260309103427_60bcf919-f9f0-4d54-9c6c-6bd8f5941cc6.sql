@@ -1,0 +1,1 @@
+CREATE POLICY "Service role can delete quote requests" ON public.quote_requests FOR DELETE USING (true);
