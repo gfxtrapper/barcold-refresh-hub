@@ -71,7 +71,7 @@ function HeroSection() {
         <SectionHeading
           label="About Us"
           title="Building Trust Through Excellence"
-          description="For over 20 years, Barcold Refrigeration has been Kenya's trusted partner in delivering world-class cooling and HVAC solutions."
+          description="Since 2019, Barcold Refrigeration has been a trusted partner in delivering world-class cooling and HVAC solutions across East Africa."
         />
       </div>
     </section>
