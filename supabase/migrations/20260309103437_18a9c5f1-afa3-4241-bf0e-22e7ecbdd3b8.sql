@@ -1,0 +1,2 @@
+DROP POLICY "Service role can delete quote requests" ON public.quote_requests;
+CREATE POLICY "Service role can delete quote requests" ON public.quote_requests FOR DELETE USING ((select auth.role()) = 'service_role');
