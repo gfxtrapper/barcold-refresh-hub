@@ -2,3 +2,6 @@ project_id = "irndsnmrhjmrxcwosgwb"
 
 [functions.notify-quote]
 verify_jwt = false
+
+[functions.admin-quotes]
+verify_jwt = false
