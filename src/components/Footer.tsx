@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import barcoldLogo from "@/assets/barcold-logo.png";
 
 const Footer = () => {
   return (
