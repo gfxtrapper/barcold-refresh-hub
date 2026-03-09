@@ -85,10 +85,10 @@ function StorySection() {
         <motion.div {...slideInFromLeft}>
           <h3 className="text-2xl font-bold">Our Story</h3>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Founded in 2003, Barcold Refrigeration Ltd started as a small repair shop in Nairobi's Industrial Area. Today, we supply a comprehensive range of compressors (GMCC, HITACHI), monoblock condensing units, cold-room systems, control systems, and HVAC accessories for residential, commercial, and industrial applications across East Africa.
+            Barcold is an international refrigeration equipment supplier. In 2019, we founded our company for design, manufacturing, trading, and engineering in cold-room projects. We have a strong factory background in China — the factory, founded in 1993, produces all brands of refrigeration equipment, specializing in condensing units, evaporators (air coolers), condensers, and other refrigeration equipment.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Our team of certified engineers and technicians brings decades of combined experience, ensuring every installation — from a 7 m³ cold room to a full HVAC plant — meets international standards of quality and reliability.
+            Over the past 6 years, our products have been well received by customers, with 20% exported abroad and annual sales reaching KSh 100 million. We have expanded our product lines to include cold storage panels and semi-hermetic compressors, and established strong relationships with many high-quality compressor, refrigeration, and air conditioning accessories and tool suppliers.
           </p>
         </motion.div>
         <motion.div {...scaleIn} className="grid grid-cols-2 gap-4">
