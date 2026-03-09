@@ -21,7 +21,7 @@ const services = [
 ];
 
 const stats = [
-  { value: "6+", label: "Years Experience" },
+  { value: "6", label: "Years Experience" },
   { value: "500+", label: "Projects Completed" },
   { value: "98%", label: "Client Satisfaction" },
   { value: "24/7", label: "Support Available" },
@@ -138,7 +138,7 @@ const Index = () => {
               <SectionHeading label="Why Barcold" title="Trusted by Kenya's Leading Businesses" center={false} />
               <div className="space-y-6">
                 {[
-                  { icon: Award, title: "20+ Years Expertise", desc: "Two decades of delivering world-class cooling solutions across East Africa." },
+                  { icon: Award, title: "26+ Years Expertise", desc: "Since 2019,delivering world-class cooling solutions across East Africa." },
                   { icon: Clock, title: "24/7 Emergency Service", desc: "Round-the-clock support to minimize downtime and protect your inventory." },
                   { icon: ShieldCheck, title: "Warranty & Guarantee", desc: "Comprehensive warranties on all installations and maintenance services." },
                 ].map((item, i) => (
