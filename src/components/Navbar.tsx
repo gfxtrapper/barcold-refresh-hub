@@ -35,13 +35,7 @@ const Navbar = () => {
     >
       <div className="container-max flex items-center justify-between px-4 py-3 md:px-8">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <span className="text-lg font-bold font-heading text-primary-foreground">B</span>
-          </div>
-          <div>
-            <span className="text-lg font-bold font-heading text-nav-foreground">Barcold</span>
-            <span className="hidden text-xs text-nav-foreground/60 sm:block">Refrigeration Ltd</span>
-          </div>
+          <img src={barcoldLogo} alt="Barcold Refrigeration Ltd" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop nav */}

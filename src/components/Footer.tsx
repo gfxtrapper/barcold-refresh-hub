@@ -9,14 +9,11 @@ const Footer = () => {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <span className="text-lg font-bold font-heading text-primary-foreground">B</span>
-              </div>
-              <span className="text-lg font-bold font-heading">Barcold</span>
+            <div className="mb-4">
+              <img src={barcoldLogo} alt="Barcold Refrigeration Ltd" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-sm text-nav-foreground/60 leading-relaxed">
-              Kenya's premier refrigeration, air conditioning & HVAC solutions provider with 20+ years of experience.
+              Kenya's premier refrigeration, air conditioning & HVAC solutions provider since 2019.
             </p>
             <div className="mt-6 flex gap-3">
               {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
