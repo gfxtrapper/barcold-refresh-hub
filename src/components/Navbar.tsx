@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import barcoldLogo from "@/assets/barcold-logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
