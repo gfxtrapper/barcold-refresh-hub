@@ -21,7 +21,7 @@ const services = [
 ];
 
 const stats = [
-  { value: "20+", label: "Years Experience" },
+  { value: "6+", label: "Years Experience" },
   { value: "500+", label: "Projects Completed" },
   { value: "98%", label: "Client Satisfaction" },
   { value: "24/7", label: "Support Available" },
