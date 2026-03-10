@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <img src={barcoldLogo} alt="Barcold Refrigeration Ltd" className="h-12 w-auto" />
+              <img src={barcoldLogo} alt="Barcold Refrigeration Ltd" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-sm text-nav-foreground/60 leading-relaxed">
               Kenya's premier refrigeration, air conditioning & HVAC solutions provider since 2019.
