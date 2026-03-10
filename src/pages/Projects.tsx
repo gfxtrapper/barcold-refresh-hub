@@ -13,7 +13,7 @@ const categories = ["All", "Commercial", "Industrial", "Hospitality"];
 const projects = [
   { image: projectSupermarket, title: "Naivas Supermarket Chain", category: "Commercial", desc: "Installed refrigeration display systems across 15 branches nationwide." },
   { image: projectWarehouse, title: "KTDA Cold Storage Facility", category: "Industrial", desc: "Designed and built a 5,000 sq ft cold storage warehouse for tea processing." },
-  { image: projectHotel, title: "Sarova Stanley Hotel", category: "Hospitality", desc: "Central HVAC system installation for the iconic 200+ room hotel in Nairobi." },
+  { image: projectHotel, title: "Movenpick Hotel", category: "Hospitality", desc: "Central HVAC system installation for the iconic 200+ room hotel in Nairobi." },
   { image: serviceColdroom, title: "Carrefour Hypermarket", category: "Commercial", desc: "Walk-in cold rooms and display refrigeration for new store openings." },
   { image: serviceAircon, title: "UAP Tower Offices", category: "Commercial", desc: "VRV air conditioning system for the 33-floor commercial tower." },
   { image: serviceMaintenance, title: "Bidco Africa Factory", category: "Industrial", desc: "Industrial cooling and process refrigeration for manufacturing plant." },
