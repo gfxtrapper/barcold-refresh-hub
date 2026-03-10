@@ -35,7 +35,7 @@ const Navbar = () => {
     >
       <div className="container-max flex items-center justify-between px-4 py-3 md:px-8">
         <Link to="/" className="flex items-center gap-2">
-          <img src={barcoldLogo} alt="Barcold Refrigeration Ltd" className="h-10 w-auto" />
+          <img src={barcoldLogo} alt="Barcold Refrigeration Ltd" className="h-10 w-auto brightness-0 invert" />
         </Link>
 
         {/* Desktop nav */}
