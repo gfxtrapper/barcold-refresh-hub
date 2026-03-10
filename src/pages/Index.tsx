@@ -30,7 +30,7 @@ const stats = [
 const projects = [
   { image: projectSupermarket, title: "Naivas Supermarket", category: "Commercial", desc: "Full refrigeration display system installation" },
   { image: projectWarehouse, title: "KTDA Cold Storage", category: "Industrial", desc: "Large-scale cold storage warehouse facility" },
-  { image: projectHotel, title: "Sarova Hotel", category: "Hospitality", desc: "Central HVAC system for 200+ room hotel" },
+  { image: projectHotel, title: "Movenpick Hotel", category: "Hospitality", desc: "Central HVAC system for 200+ room hotel" },
 ];
 
 const testimonials = [
