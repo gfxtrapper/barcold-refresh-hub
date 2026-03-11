@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/$USER/public_html
+    - export DEPLOYPATH=/home/barcold1/public_html/barcoldrefrigerationltd.co.ke
     - /bin/cp -R dist/* $DEPLOYPATH/
