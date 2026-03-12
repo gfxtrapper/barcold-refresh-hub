@@ -18,7 +18,7 @@ const services = [
   { icon: Wrench, title: "Parts & Accessories", desc: "Thermostats, pressure controls, brackets, anti-vibration mountings, and condensate pumps." },
   { icon: Building2, title: "HVAC & Ventilation", desc: "Complete heating, ventilation, and air conditioning solutions for commercial and industrial facilities." },
   { icon: ShieldCheck, title: "Service & Maintenance", desc: "Preventive maintenance, 24/7 emergency repairs, energy audits, and system commissioning." },
-  { icon: Wrench, title: "Kitchen Equipment", desc: "Commercial kitchen equipment supply, installation, and maintenance for restaurants, hotels, and catering facilities." },
+  { icon: UtensilsCrossed, title: "Kitchen Equipment", desc: "Commercial kitchen equipment supply, installation, and maintenance for restaurants, hotels, and catering facilities." },
 ];
 
 const stats = [
