@@ -40,7 +40,7 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-heading font-semibold">Services</h4>
             <ul className="space-y-2 text-sm text-nav-foreground/60">
-              {["Compressors & Units", "Air Conditioning", "Cold Room Systems", "Parts & Accessories", "Service & Maintenance"].map((s) => (
+              {["Compressors & Units", "Air Conditioning", "Cold Room Systems", "Parts & Accessories", "Service & Maintenance", "Kitchen Equipment"].map((s) => (
                 <li key={s}>
                   <Link to="/services" className="transition-colors hover:text-nav-foreground">{s}</Link>
                 </li>

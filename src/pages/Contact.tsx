@@ -96,6 +96,7 @@ const Contact = () => {
                       <option>Cold Room Construction</option>
                       <option>Maintenance & Repairs</option>
                       <option>HVAC Systems</option>
+                      <option>Kitchen Equipment</option>
                       <option>Energy Audit</option>
                     </select>
                   </div>

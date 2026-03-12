@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star } from "lucide-react";
+import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import heroImage from "@/assets/hero-refrigeration.jpg";
