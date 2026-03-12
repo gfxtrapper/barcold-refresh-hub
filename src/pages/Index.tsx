@@ -268,7 +268,7 @@ const Index = () => {
                 <Link to="/contact">Request a Quote</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <a href="tel:+254700000000">Call Us Now</a>
+                <a href="tel:+254742105866">Call Us Now</a>
               </Button>
             </div>
           </motion.div>
