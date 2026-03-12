@@ -21,6 +21,7 @@ const serviceOptions = [
   "Cold Room Construction",
   "Maintenance & Repairs",
   "HVAC Systems",
+  "Kitchen Equipment",
   "Energy Audit",
 ];
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star } from "lucide-react";
+import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import heroImage from "@/assets/hero-refrigeration.jpg";
@@ -18,6 +18,7 @@ const services = [
   { icon: Wrench, title: "Parts & Accessories", desc: "Thermostats, pressure controls, brackets, anti-vibration mountings, and condensate pumps." },
   { icon: Building2, title: "HVAC & Ventilation", desc: "Complete heating, ventilation, and air conditioning solutions for commercial and industrial facilities." },
   { icon: ShieldCheck, title: "Service & Maintenance", desc: "Preventive maintenance, 24/7 emergency repairs, energy audits, and system commissioning." },
+  { icon: UtensilsCrossed, title: "Kitchen Equipment", desc: "Commercial kitchen equipment supply, installation, and maintenance for restaurants, hotels, and catering facilities." },
 ];
 
 const stats = [
@@ -267,7 +268,7 @@ const Index = () => {
                 <Link to="/contact">Request a Quote</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <a href="tel:+254700000000">Call Us Now</a>
+                <a href="tel:+254742105866">Call Us Now</a>
               </Button>
             </div>
           </motion.div>

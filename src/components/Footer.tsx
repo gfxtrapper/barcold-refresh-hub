@@ -40,7 +40,7 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-heading font-semibold">Services</h4>
             <ul className="space-y-2 text-sm text-nav-foreground/60">
-              {["Compressors & Units", "Air Conditioning", "Cold Room Systems", "Parts & Accessories", "Service & Maintenance"].map((s) => (
+              {["Compressors & Units", "Air Conditioning", "Cold Room Systems", "Parts & Accessories", "Service & Maintenance", "Kitchen Equipment"].map((s) => (
                 <li key={s}>
                   <Link to="/services" className="transition-colors hover:text-nav-foreground">{s}</Link>
                 </li>
@@ -55,6 +55,10 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 Jowin Shopping Arcade, Ruai Eastern Bypass, Nairobi
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-primary" />
+                <a href="tel:+254742105866" className="hover:text-nav-foreground">+254 742 105 866</a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />

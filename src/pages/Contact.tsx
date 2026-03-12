@@ -37,7 +37,7 @@ const Contact = () => {
             <p className="text-muted-foreground">We'd love to hear from you. Reach out via any of the channels below.</p>
             {[
               { icon: MapPin, label: "Address", value: "Jowin Shopping Arcade, Ruai Eastern Bypass\nNairobi, Kenya" },
-              { icon: Phone, label: "Phone", value: "+254 786 839 306" },
+              { icon: Phone, label: "Phone", value: "+254 742 105 866\n+254 786 839 306" },
               { icon: Mail, label: "Email", value: "info@barcoldrefrigerationltd.co.ke" },
               { icon: Clock, label: "Working Hours", value: "Mon–Fri: 8AM – 6PM\nSat: 9AM – 1PM" },
             ].map((item) => (
@@ -96,6 +96,7 @@ const Contact = () => {
                       <option>Cold Room Construction</option>
                       <option>Maintenance & Repairs</option>
                       <option>HVAC Systems</option>
+                      <option>Kitchen Equipment</option>
                       <option>Energy Audit</option>
                     </select>
                   </div>

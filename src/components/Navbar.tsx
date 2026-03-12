@@ -56,9 +56,9 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="tel:+254786839306" className="flex items-center gap-2 text-sm text-nav-foreground/80">
+          <a href="tel:+254742105866" className="flex items-center gap-2 text-sm text-nav-foreground/80">
             <Phone className="h-4 w-4" />
-            +254 786 839 306
+            +254 742 105 866
           </a>
           <Button asChild>
             <Link to="/request-quote">Get a Quote</Link>
