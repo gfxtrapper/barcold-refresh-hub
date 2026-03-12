@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import serviceAircon from "@/assets/service-aircon.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
+import serviceKitchen from "@/assets/service-kitchen.jpg";
 
 const services = [
   { icon: Snowflake, title: "Compressors & Condensing Units", image: serviceColdroom, desc: "We supply GMCC and HITACHI compressors — rotary, scroll, inverter, and fixed-speed — alongside variable-temperature monoblock condensing units for cold-room applications ranging from -25 °C to +10 °C.", features: ["GMCC Rotary & Scroll", "HITACHI Inverter & Fixed Speed", "Monoblock condensing units", "R404A / R410A systems"] },
