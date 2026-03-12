@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import serviceAircon from "@/assets/service-aircon.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
+import serviceKitchen from "@/assets/service-kitchen.jpg";
 
 const services = [
   { icon: Snowflake, title: "Compressors & Condensing Units", image: serviceColdroom, desc: "We supply GMCC and HITACHI compressors — rotary, scroll, inverter, and fixed-speed — alongside variable-temperature monoblock condensing units for cold-room applications ranging from -25 °C to +10 °C.", features: ["GMCC Rotary & Scroll", "HITACHI Inverter & Fixed Speed", "Monoblock condensing units", "R404A / R410A systems"] },
@@ -14,7 +15,7 @@ const services = [
   { icon: Wrench, title: "Parts & Accessories", image: serviceMaintenance, desc: "Thermostats (TAM series, -35 °C to +10 °C), LP/HP/dual pressure controls, condensers, condensate pumps, AC cleaning covers, and anti-vibration mountings.", features: ["TAM thermostats", "LP / HP pressure controls", "Condensate pumps", "Anti-vibration mountings"] },
   { icon: Building2, title: "HVAC & Ventilation", image: serviceAircon, desc: "Full heating, ventilation, and air conditioning solutions for large-scale commercial and industrial facilities — design, engineering, ductwork fabrication, and building automation.", features: ["System design & engineering", "Ductwork fabrication", "Building automation", "Energy management"] },
   { icon: ShieldCheck, title: "Service & Maintenance", image: serviceMaintenance, desc: "Preventive maintenance contracts, 24/7 emergency repairs, system commissioning, energy audits, retrofits, and operator training programs.", features: ["Preventive maintenance", "24/7 emergency repairs", "Energy audits", "System commissioning"] },
-  { icon: UtensilsCrossed, title: "Kitchen Equipment", image: serviceMaintenance, desc: "Supply, installation, and maintenance of commercial kitchen equipment — ovens, fryers, grills, dishwashers, food prep stations, and exhaust systems for restaurants, hotels, and catering businesses.", features: ["Commercial ovens & grills", "Dishwashers & steamers", "Exhaust & ventilation", "Equipment maintenance"] },
+  { icon: UtensilsCrossed, title: "Kitchen Equipment", image: serviceKitchen, desc: "Supply, installation, and maintenance of commercial kitchen equipment — ovens, fryers, grills, dishwashers, food prep stations, and exhaust systems for restaurants, hotels, and catering businesses.", features: ["Commercial ovens & grills", "Dishwashers & steamers", "Exhaust & ventilation", "Equipment maintenance"] },
 ];
 
 const Services = () => (
