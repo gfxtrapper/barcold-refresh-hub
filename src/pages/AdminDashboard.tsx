@@ -6,8 +6,10 @@ import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "@/hooks/use-toast";
-import { Lock, Eye, Trash2, RefreshCw, LogOut } from "lucide-react";
+import { Lock, Eye, Trash2, RefreshCw, LogOut, FileText, Image } from "lucide-react";
+import AdminGallery from "@/components/AdminGallery";
 
 interface QuoteRequest {
   id: string;
@@ -52,13 +54,7 @@ function LoginGate({ onLogin }: { onLogin: (pw: string) => void }) {
           <p className="text-sm text-muted-foreground">Enter the admin password to continue</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <Input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? "Verifying..." : "Sign In"}
           </Button>
@@ -115,7 +111,6 @@ const AdminDashboard = () => {
       body: { password: pw, action: "list" },
     });
     setLoading(false);
-
     if (error || data?.error) {
       toast({ title: "Error", description: data?.error || "Failed to fetch quotes", variant: "destructive" });
       return false;
@@ -150,82 +145,93 @@ const AdminDashboard = () => {
     <main className="min-h-screen bg-secondary pt-20">
       <div className="container-max px-4 py-8 md:px-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h1 className="text-2xl font-bold">Quote Requests</h1>
-            <p className="text-sm text-muted-foreground">{quotes.length} total submissions</p>
-          </div>
+          <h1 className="text-2xl font-bold">Admin Dashboard</h1>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={() => fetchQuotes(password)} disabled={loading}>
-              <RefreshCw className={`mr-1 h-4 w-4 ${loading ? "animate-spin" : ""}`} /> Refresh
-            </Button>
             <Button variant="ghost" size="sm" onClick={() => { setAuthenticated(false); setPassword(""); setQuotes([]); }}>
               <LogOut className="mr-1 h-4 w-4" /> Logout
             </Button>
           </div>
         </div>
 
-        <Card className="overflow-x-auto">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Date</TableHead>
-                <TableHead>Name</TableHead>
-                <TableHead>Email</TableHead>
-                <TableHead>Services</TableHead>
-                <TableHead>Location</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {quotes.length === 0 ? (
-                <TableRow>
-                  <TableCell colSpan={6} className="py-12 text-center text-muted-foreground">
-                    {loading ? "Loading..." : "No quote requests yet."}
-                  </TableCell>
-                </TableRow>
-              ) : (
-                quotes.map((q) => (
-                  <TableRow key={q.id}>
-                    <TableCell className="whitespace-nowrap text-sm">
-                      {new Date(q.created_at).toLocaleDateString()}
-                    </TableCell>
-                    <TableCell className="font-medium">{q.name}</TableCell>
-                    <TableCell className="text-sm">{q.email}</TableCell>
-                    <TableCell>
-                      <div className="flex flex-wrap gap-1">
-                        {q.services?.slice(0, 2).map((s) => (
-                          <Badge key={s} variant="secondary" className="text-xs">{s}</Badge>
-                        ))}
-                        {q.services?.length > 2 && (
-                          <Badge variant="outline" className="text-xs">+{q.services.length - 2}</Badge>
-                        )}
-                      </div>
-                    </TableCell>
-                    <TableCell className="text-sm">{q.location || "—"}</TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex justify-end gap-1">
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Button variant="ghost" size="icon"><Eye className="h-4 w-4" /></Button>
-                          </DialogTrigger>
-                          <DialogContent className="max-h-[80vh] overflow-y-auto sm:max-w-lg">
-                            <DialogHeader>
-                              <DialogTitle>Quote from {q.name}</DialogTitle>
-                            </DialogHeader>
-                            <QuoteDetail quote={q} />
-                          </DialogContent>
-                        </Dialog>
-                        <Button variant="ghost" size="icon" onClick={() => handleDelete(q.id)}>
-                          <Trash2 className="h-4 w-4 text-destructive" />
-                        </Button>
-                      </div>
-                    </TableCell>
+        <Tabs defaultValue="quotes" className="space-y-6">
+          <TabsList>
+            <TabsTrigger value="quotes" className="gap-2">
+              <FileText className="h-4 w-4" /> Quotes
+            </TabsTrigger>
+            <TabsTrigger value="gallery" className="gap-2">
+              <Image className="h-4 w-4" /> Gallery
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="quotes">
+            <div className="mb-4 flex items-center justify-between">
+              <p className="text-sm text-muted-foreground">{quotes.length} total submissions</p>
+              <Button variant="outline" size="sm" onClick={() => fetchQuotes(password)} disabled={loading}>
+                <RefreshCw className={`mr-1 h-4 w-4 ${loading ? "animate-spin" : ""}`} /> Refresh
+              </Button>
+            </div>
+            <Card className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Date</TableHead>
+                    <TableHead>Name</TableHead>
+                    <TableHead>Email</TableHead>
+                    <TableHead>Services</TableHead>
+                    <TableHead>Location</TableHead>
+                    <TableHead className="text-right">Actions</TableHead>
                   </TableRow>
-                ))
-              )}
-            </TableBody>
-          </Table>
-        </Card>
+                </TableHeader>
+                <TableBody>
+                  {quotes.length === 0 ? (
+                    <TableRow>
+                      <TableCell colSpan={6} className="py-12 text-center text-muted-foreground">
+                        {loading ? "Loading..." : "No quote requests yet."}
+                      </TableCell>
+                    </TableRow>
+                  ) : (
+                    quotes.map((q) => (
+                      <TableRow key={q.id}>
+                        <TableCell className="whitespace-nowrap text-sm">{new Date(q.created_at).toLocaleDateString()}</TableCell>
+                        <TableCell className="font-medium">{q.name}</TableCell>
+                        <TableCell className="text-sm">{q.email}</TableCell>
+                        <TableCell>
+                          <div className="flex flex-wrap gap-1">
+                            {q.services?.slice(0, 2).map((s) => (
+                              <Badge key={s} variant="secondary" className="text-xs">{s}</Badge>
+                            ))}
+                            {q.services?.length > 2 && <Badge variant="outline" className="text-xs">+{q.services.length - 2}</Badge>}
+                          </div>
+                        </TableCell>
+                        <TableCell className="text-sm">{q.location || "—"}</TableCell>
+                        <TableCell className="text-right">
+                          <div className="flex justify-end gap-1">
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button variant="ghost" size="icon"><Eye className="h-4 w-4" /></Button>
+                              </DialogTrigger>
+                              <DialogContent className="max-h-[80vh] overflow-y-auto sm:max-w-lg">
+                                <DialogHeader><DialogTitle>Quote from {q.name}</DialogTitle></DialogHeader>
+                                <QuoteDetail quote={q} />
+                              </DialogContent>
+                            </Dialog>
+                            <Button variant="ghost" size="icon" onClick={() => handleDelete(q.id)}>
+                              <Trash2 className="h-4 w-4 text-destructive" />
+                            </Button>
+                          </div>
+                        </TableCell>
+                      </TableRow>
+                    ))
+                  )}
+                </TableBody>
+              </Table>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="gallery">
+            <AdminGallery password={password} />
+          </TabsContent>
+        </Tabs>
       </div>
     </main>
   );
