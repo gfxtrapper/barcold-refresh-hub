@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import GallerySlideshow from "@/components/GallerySlideshow";
 import heroImage from "@/assets/hero-refrigeration.jpg";
 import serviceAircon from "@/assets/service-aircon.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
@@ -217,6 +218,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Gallery Slideshow */}
+      <GallerySlideshow />
 
       {/* Testimonials */}
       <section className="section-padding bg-secondary">
