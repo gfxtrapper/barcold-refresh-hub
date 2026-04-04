@@ -8,8 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "@/hooks/use-toast";
-import { Lock, Eye, Trash2, RefreshCw, LogOut, FileText, Image } from "lucide-react";
+import { Lock, Eye, Trash2, RefreshCw, LogOut, FileText, Image, MessageSquareQuote } from "lucide-react";
 import AdminGallery from "@/components/AdminGallery";
+import AdminTestimonials from "@/components/AdminTestimonials";
 
 interface QuoteRequest {
   id: string;
@@ -161,6 +162,9 @@ const AdminDashboard = () => {
             <TabsTrigger value="gallery" className="gap-2">
               <Image className="h-4 w-4" /> Gallery
             </TabsTrigger>
+            <TabsTrigger value="testimonials" className="gap-2">
+              <MessageSquareQuote className="h-4 w-4" /> Testimonials
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="quotes">
@@ -230,6 +234,10 @@ const AdminDashboard = () => {
 
           <TabsContent value="gallery">
             <AdminGallery password={password} />
+          </TabsContent>
+
+          <TabsContent value="testimonials">
+            <AdminTestimonials password={password} />
           </TabsContent>
         </Tabs>
       </div>

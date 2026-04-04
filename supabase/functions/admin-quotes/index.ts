@@ -140,6 +140,61 @@ Deno.serve(async (req) => {
       });
     }
 
+    // Testimonial actions
+    if (action === "testimonials_list") {
+      const { data, error } = await supabase
+        .from("testimonials")
+        .select("*")
+        .order("display_order", { ascending: true });
+      if (error) throw error;
+      return new Response(JSON.stringify({ data }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    if (action === "testimonials_add") {
+      const { name, role, text, rating } = body;
+      if (!name || !role || !text) {
+        return new Response(JSON.stringify({ error: "Missing name, role, or text" }), {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const { data: maxOrder } = await supabase
+        .from("testimonials")
+        .select("display_order")
+        .order("display_order", { ascending: false })
+        .limit(1);
+
+      const nextOrder = (maxOrder?.[0]?.display_order ?? -1) + 1;
+
+      const { data: inserted, error: insertError } = await supabase
+        .from("testimonials")
+        .insert({
+          name,
+          role,
+          text,
+          rating: rating || 5,
+          display_order: nextOrder,
+        })
+        .select()
+        .single();
+      if (insertError) throw insertError;
+
+      return new Response(JSON.stringify({ data: inserted }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    if (action === "testimonials_delete" && id) {
+      const { error } = await supabase.from("testimonials").delete().eq("id", id);
+      if (error) throw error;
+      return new Response(JSON.stringify({ success: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     return new Response(JSON.stringify({ error: "Invalid action" }), {
       status: 400,
       headers: { ...corsHeaders, "Content-Type": "application/json" },

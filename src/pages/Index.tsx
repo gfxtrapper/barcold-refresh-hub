@@ -1,9 +1,11 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import GallerySlideshow from "@/components/GallerySlideshow";
+import { supabase } from "@/integrations/supabase/client";
 import heroImage from "@/assets/hero-refrigeration.jpg";
 import serviceAircon from "@/assets/service-aircon.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
@@ -35,13 +37,33 @@ const projects = [
   { image: projectHotel, title: "Movenpick Hotel", category: "Hospitality", desc: "Central HVAC system for 200+ room hotel" },
 ];
 
-const testimonials = [
+const fallbackTestimonials = [
   { name: "James Mwangi", role: "Operations Manager, Naivas", text: "Barcold transformed our refrigeration systems across 15 branches. Professional, reliable, and always on time.", rating: 5 },
   { name: "Sarah Odhiambo", role: "Facility Manager, Sarova Hotels", text: "Their HVAC expertise is unmatched in East Africa. We've worked with them for over 8 years now.", rating: 5 },
   { name: "Peter Njoroge", role: "Director, Fresh Foods Ltd", text: "The cold room they built for us operates flawlessly. Excellent after-sales support and maintenance.", rating: 5 },
 ];
 
 const Index = () => {
+  const [testimonials, setTestimonials] = useState(fallbackTestimonials);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      const { data } = await supabase
+        .from("testimonials")
+        .select("*")
+        .order("display_order", { ascending: true });
+      if (data && data.length > 0) {
+        setTestimonials(data.map((t: any) => ({
+          name: t.name,
+          role: t.role,
+          text: t.text,
+          rating: t.rating,
+        })));
+      }
+    };
+    fetchTestimonials();
+  }, []);
+
   return (
     <main>
       {/* Hero */}
