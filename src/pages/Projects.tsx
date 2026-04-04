@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
+import { supabase } from "@/integrations/supabase/client";
 import projectSupermarket from "@/assets/project-supermarket.jpg";
 import projectWarehouse from "@/assets/project-warehouse.jpg";
 import projectHotel from "@/assets/project-hotel.jpg";
@@ -19,9 +20,28 @@ const projects = [
   { image: serviceMaintenance, title: "Bidco Africa Factory", category: "Industrial", desc: "Industrial cooling and process refrigeration for manufacturing plant." },
 ];
 
+interface GalleryImage {
+  id: string;
+  title: string;
+  caption: string | null;
+  image_url: string;
+}
+
 const Projects = () => {
   const [filter, setFilter] = useState("All");
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([]);
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
+
+  useEffect(() => {
+    const fetchGallery = async () => {
+      const { data } = await supabase
+        .from("gallery_images")
+        .select("*")
+        .order("display_order", { ascending: true });
+      if (data && data.length > 0) setGalleryImages(data);
+    };
+    fetchGallery();
+  }, []);
 
   return (
     <main className="pt-20">
@@ -75,6 +95,40 @@ const Projects = () => {
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      {galleryImages.length > 0 && (
+        <section className="section-padding bg-secondary">
+          <div className="container-max">
+            <SectionHeading label="Gallery" title="Our Work Gallery" description="Browse photos from our completed installations and projects." />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {galleryImages.map((img, i) => (
+                <motion.div
+                  key={img.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05, duration: 0.4 }}
+                  className="group overflow-hidden rounded-xl bg-card shadow-sm"
+                >
+                  <div className="overflow-hidden">
+                    <img
+                      src={img.image_url}
+                      alt={img.title}
+                      className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <p className="font-medium text-sm">{img.title}</p>
+                    {img.caption && <p className="text-xs text-muted-foreground">{img.caption}</p>}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </main>
   );
 };
