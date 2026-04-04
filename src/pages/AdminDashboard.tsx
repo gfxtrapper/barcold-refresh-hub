@@ -235,6 +235,10 @@ const AdminDashboard = () => {
           <TabsContent value="gallery">
             <AdminGallery password={password} />
           </TabsContent>
+
+          <TabsContent value="testimonials">
+            <AdminTestimonials password={password} />
+          </TabsContent>
         </Tabs>
       </div>
     </main>
