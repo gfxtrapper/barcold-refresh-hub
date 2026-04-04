@@ -8,8 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "@/hooks/use-toast";
-import { Lock, Eye, Trash2, RefreshCw, LogOut, FileText, Image } from "lucide-react";
+import { Lock, Eye, Trash2, RefreshCw, LogOut, FileText, Image, MessageSquareQuote } from "lucide-react";
 import AdminGallery from "@/components/AdminGallery";
+import AdminTestimonials from "@/components/AdminTestimonials";
 
 interface QuoteRequest {
   id: string;
