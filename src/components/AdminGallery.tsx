@@ -26,6 +26,34 @@ const AdminGallery = ({ password }: AdminGalleryProps) => {
   const [title, setTitle] = useState("");
   const [caption, setCaption] = useState("");
   const [file, setFile] = useState<File | null>(null);
+import { useState, useCallback, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
+import { toast } from "@/hooks/use-toast";
+import { Upload, Trash2, Image, Loader2 } from "lucide-react";
+
+interface GalleryImage {
+  id: string;
+  title: string;
+  caption: string | null;
+  image_url: string;
+  display_order: number;
+  created_at: string;
+}
+
+interface AdminGalleryProps {
+  password: string;
+}
+
+const AdminGallery = ({ password }: AdminGalleryProps) => {
+  const [images, setImages] = useState<GalleryImage[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [title, setTitle] = useState("");
+  const [caption, setCaption] = useState("");
+  const [file, setFile] = useState<File | null>(null);
   const [fetched, setFetched] = useState(false);
 
   const fetchImages = useCallback(async () => {
@@ -42,9 +70,9 @@ const AdminGallery = ({ password }: AdminGalleryProps) => {
     setFetched(true);
   }, [password]);
 
-  if (!fetched) {
+  useEffect(() => {
     fetchImages();
-  }
+  }, [fetchImages]);
 
   const handleUpload = async (e: React.FormEvent) => {
     e.preventDefault();
