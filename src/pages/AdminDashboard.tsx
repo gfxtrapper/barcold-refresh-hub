@@ -162,6 +162,9 @@ const AdminDashboard = () => {
             <TabsTrigger value="gallery" className="gap-2">
               <Image className="h-4 w-4" /> Gallery
             </TabsTrigger>
+            <TabsTrigger value="testimonials" className="gap-2">
+              <MessageSquareQuote className="h-4 w-4" /> Testimonials
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="quotes">
