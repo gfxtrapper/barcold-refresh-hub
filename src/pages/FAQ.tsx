@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 
 const faqs = [
   { q: "What areas in Kenya do you serve?", a: "We serve clients across Kenya, with primary operations in Nairobi, Mombasa, Kisumu, Nakuru, and Eldoret. We also undertake projects in neighboring East African countries." },
@@ -14,6 +15,20 @@ const faqs = [
 
 const FAQ = () => (
   <main className="pt-20">
+    <SEO
+      title="FAQ - HVAC & Refrigeration Questions Answered"
+      description="Frequently asked questions about Barcold Refrigeration's services — areas served, emergency repairs, maintenance contracts, warranties, financing & energy savings."
+      canonical="/faq"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": { "@type": "Answer", "text": f.a }
+        }))
+      }}
+    />
     <section className="section-padding bg-secondary">
       <div className="container-max">
         <SectionHeading label="FAQ" title="Frequently Asked Questions" description="Find answers to common questions about our services and processes." />

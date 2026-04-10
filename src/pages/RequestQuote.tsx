@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 
 const steps = [

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import projectSupermarket from "@/assets/project-supermarket.jpg";
 import projectWarehouse from "@/assets/project-warehouse.jpg";

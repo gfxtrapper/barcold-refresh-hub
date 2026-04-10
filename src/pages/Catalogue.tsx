@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 
 /* ------------------------------------------------------------------ */
 /*  CATALOGUE DATA — from Barcold Refrigeration product profile       */
