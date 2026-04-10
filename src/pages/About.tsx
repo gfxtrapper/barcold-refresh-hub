@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, Users, Package, Shield, Target, Eye } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
 
