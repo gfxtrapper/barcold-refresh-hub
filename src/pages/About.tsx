@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, Users, Package, Shield, Target, Eye } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
 
@@ -157,6 +158,18 @@ function WhyChooseUsSection() {
 
 const About = () => (
   <main className="pt-20">
+    <SEO
+      title="About Us - Refrigeration & HVAC Experts Since 2019"
+      description="Learn about Barcold Refrigeration Ltd — Kenya's trusted HVAC & cooling partner since 2019. International supplier with 500+ projects completed across East Africa."
+      canonical="/about"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Barcold Refrigeration Ltd",
+        "description": "Kenya's trusted HVAC & cooling partner since 2019.",
+        "url": "https://barcoldrefrigerationltd.co.ke/about"
+      }}
+    />
     <HeroSection />
     <StorySection />
     <MissionVisionSection />

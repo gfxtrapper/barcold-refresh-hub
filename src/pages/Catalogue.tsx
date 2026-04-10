@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 
 /* ------------------------------------------------------------------ */
 /*  CATALOGUE DATA — from Barcold Refrigeration product profile       */
@@ -291,6 +292,11 @@ const item = {
 
 const Catalogue = () => (
   <main className="pt-20">
+    <SEO
+      title="Product Catalogue - Compressors, Cold Rooms & HVAC Equipment"
+      description="Browse Barcold Refrigeration's full product catalogue — GMCC & HITACHI compressors, condensing units, cold room systems, AC controls & HVAC accessories."
+      canonical="/catalogue"
+    />
     {/* Hero */}
     <section className="section-padding bg-secondary">
       <div className="container-max flex flex-col items-center text-center">

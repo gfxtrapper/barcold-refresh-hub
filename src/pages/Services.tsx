@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Snowflake, Wind, ThermometerSnowflake, Wrench, Building2, ShieldCheck, UtensilsCrossed, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import serviceAircon from "@/assets/service-aircon.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
@@ -20,6 +21,19 @@ const services = [
 
 const Services = () => (
   <main className="pt-20">
+    <SEO
+      title="Refrigeration, HVAC & AC Services in Kenya"
+      description="Compressors, cold rooms, air conditioning, kitchen equipment, HVAC ventilation & 24/7 maintenance services. Barcold Refrigeration serves commercial & industrial clients across Kenya."
+      canonical="/services"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "HVAC and Refrigeration",
+        "provider": { "@type": "LocalBusiness", "name": "Barcold Refrigeration Ltd" },
+        "areaServed": { "@type": "Country", "name": "Kenya" },
+        "url": "https://barcoldrefrigerationltd.co.ke/services"
+      }}
+    />
     <section className="section-padding bg-secondary">
       <div className="container-max">
         <SectionHeading label="Our Services" title="Comprehensive Cooling Solutions" description="End-to-end refrigeration, air conditioning, and HVAC services for commercial, industrial, and residential clients." />

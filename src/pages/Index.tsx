@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import GallerySlideshow from "@/components/GallerySlideshow";
 import { supabase } from "@/integrations/supabase/client";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-refrigeration.jpg";
 import serviceAircon from "@/assets/service-aircon.jpg";
 import serviceColdroom from "@/assets/service-coldroom.jpg";
@@ -66,6 +67,23 @@ const Index = () => {
 
   return (
     <main>
+      <SEO
+        title="Premier HVAC & Refrigeration Solutions in Kenya"
+        description="Kenya's leading refrigeration, air conditioning & HVAC provider. Cold rooms, compressors, AC systems, kitchen equipment — supply, installation & 24/7 maintenance since 2019."
+        canonical="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Barcold Refrigeration Ltd",
+          "url": "https://barcoldrefrigerationltd.co.ke",
+          "logo": "https://barcoldrefrigerationltd.co.ke/barcold-logo.png",
+          "description": "Kenya's leading refrigeration, air conditioning & HVAC services provider since 2019.",
+          "address": { "@type": "PostalAddress", "addressCountry": "KE" },
+          "telephone": "+254742105866",
+          "serviceArea": { "@type": "Country", "name": "Kenya" },
+          "knowsAbout": ["Refrigeration", "HVAC", "Cold Room Installation", "Air Conditioning", "Commercial Refrigeration", "Kitchen Equipment"]
+        }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-center overflow-hidden">
         <div className="absolute inset-0">

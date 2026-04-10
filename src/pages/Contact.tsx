@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -23,6 +24,11 @@ const Contact = () => {
 
   return (
     <main className="pt-20">
+      <SEO
+        title="Contact Us - Get a Free HVAC & Refrigeration Quote"
+        description="Contact Barcold Refrigeration for a free consultation. Call +254 742 105 866 or email us. 24/7 emergency HVAC & refrigeration support across Kenya."
+        canonical="/contact"
+      />
       <section className="section-padding bg-secondary">
         <div className="container-max">
           <SectionHeading label="Contact" title="Get In Touch" description="Have a project in mind? Reach out to us for a free consultation and quote." />

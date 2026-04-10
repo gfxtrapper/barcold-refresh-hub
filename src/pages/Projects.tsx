@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import projectSupermarket from "@/assets/project-supermarket.jpg";
 import projectWarehouse from "@/assets/project-warehouse.jpg";
@@ -45,6 +46,11 @@ const Projects = () => {
 
   return (
     <main className="pt-20">
+      <SEO
+        title="Projects - Refrigeration & HVAC Installations in Kenya"
+        description="View Barcold Refrigeration's completed projects — supermarket refrigeration, cold storage facilities, hotel HVAC systems & more across Kenya."
+        canonical="/projects"
+      />
       <section className="section-padding bg-secondary">
         <div className="container-max">
           <SectionHeading label="Portfolio" title="Our Projects" description="Explore our track record of successful installations across Kenya." />

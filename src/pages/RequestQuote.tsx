@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 
 const steps = [
@@ -102,6 +103,11 @@ const RequestQuote = () => {
 
   return (
     <main className="pt-20">
+      <SEO
+        title="Request a Quote - Free HVAC & Refrigeration Estimate"
+        description="Get a free, no-obligation quote for refrigeration, HVAC, cold room or kitchen equipment projects. Barcold Refrigeration serves all of Kenya."
+        canonical="/request-quote"
+      />
       <section className="section-padding bg-secondary">
         <div className="container-max">
           <SectionHeading label="Get a Quote" title="Request a Detailed Quote" description="Tell us about your project and we'll prepare a comprehensive, no-obligation quote tailored to your needs." />
