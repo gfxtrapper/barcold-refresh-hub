@@ -88,7 +88,7 @@ const Projects = () => {
                   className="group overflow-hidden rounded-xl border bg-card"
                 >
                   <div className="overflow-hidden">
-                    <img src={project.image} alt={project.title} className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <img src={project.image} alt={project.title} className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   </div>
                   <div className="p-5">
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary">{project.category}</span>

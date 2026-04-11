@@ -69,7 +69,7 @@ const Services = () => (
               </Button>
             </div>
             <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-              <img src={service.image} alt={service.title} className="rounded-xl shadow-lg" />
+              <img src={service.image} alt={service.title} className="rounded-xl shadow-lg" loading="lazy" />
             </div>
           </motion.div>
         ))}

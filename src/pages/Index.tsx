@@ -210,9 +210,9 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-2 gap-4"
             >
-              <img src={serviceAircon} alt="Air conditioning units" className="rounded-xl shadow-lg" />
-              <img src={serviceColdroom} alt="Cold room interior" className="mt-8 rounded-xl shadow-lg" />
-              <img src={serviceMaintenance} alt="HVAC maintenance" className="col-span-2 h-48 w-full rounded-xl object-cover shadow-lg" />
+              <img src={serviceAircon} alt="Air conditioning units" className="rounded-xl shadow-lg" loading="lazy" />
+              <img src={serviceColdroom} alt="Cold room interior" className="mt-8 rounded-xl shadow-lg" loading="lazy" />
+              <img src={serviceMaintenance} alt="HVAC maintenance" className="col-span-2 h-48 w-full rounded-xl object-cover shadow-lg" loading="lazy" />
             </motion.div>
           </div>
         </div>
@@ -241,6 +241,7 @@ const Index = () => {
                     src={project.image}
                     alt={project.title}
                     className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-5">
