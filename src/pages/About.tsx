@@ -97,10 +97,12 @@ function StorySection() {
             src={serviceMaintenance}
             alt="Barcold technician performing maintenance"
             className="rounded-xl shadow-lg"
+            loading="lazy"
           />
           <img
             src={serviceColdroom}
             alt="Barcold cold room installation"
+            loading="lazy"
             className="mt-8 rounded-xl shadow-lg"
           />
         </motion.div>
