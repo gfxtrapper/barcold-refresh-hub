@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Award, Users, Package, Shield, Target, Eye } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
-import serviceMaintenance from "@/assets/service-maintenance.jpg";
-import serviceColdroom from "@/assets/service-coldroom.jpg";
+import technicianAtWork from "@/assets/untitled-00647.jpg";
+import companySignage from "@/assets/untitled-00649-2.jpg";
+import workshopTeam from "@/assets/untitled-00639.jpg";
+import compressorUnit from "@/assets/untitled-00452.jpg";
 
 // Animation constants
 const slideInFromLeft = {
@@ -94,16 +96,22 @@ function StorySection() {
         </motion.div>
         <motion.div {...scaleIn} className="grid grid-cols-2 gap-4">
           <img
-            src={serviceMaintenance}
-            alt="Barcold technician performing maintenance"
+            src={technicianAtWork}
+            alt="Barcold technician working on refrigeration equipment"
             className="rounded-xl shadow-lg"
             loading="lazy"
           />
           <img
-            src={serviceColdroom}
-            alt="Barcold cold room installation"
+            src={compressorUnit}
+            alt="Barcold branded compressor unit in workshop"
             loading="lazy"
             className="mt-8 rounded-xl shadow-lg"
+          />
+          <img
+            src={companySignage}
+            alt="Barcold Refrigeration Ltd company signage"
+            className="col-span-2 h-48 w-full rounded-xl object-cover shadow-lg"
+            loading="lazy"
           />
         </motion.div>
       </div>

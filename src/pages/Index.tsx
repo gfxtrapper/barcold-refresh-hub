@@ -8,12 +8,12 @@ import GallerySlideshow from "@/components/GallerySlideshow";
 import { supabase } from "@/integrations/supabase/client";
 import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-refrigeration.jpg";
-import serviceAircon from "@/assets/service-aircon.jpg";
-import serviceColdroom from "@/assets/service-coldroom.jpg";
-import serviceMaintenance from "@/assets/service-maintenance.jpg";
-import projectSupermarket from "@/assets/project-supermarket.jpg";
-import projectWarehouse from "@/assets/project-warehouse.jpg";
-import projectHotel from "@/assets/project-hotel.jpg";
+import showroomEquipment from "@/assets/untitled-00497.jpg";
+import condensingUnits from "@/assets/untitled-00614.jpg";
+import technicianWork from "@/assets/untitled-00561.jpg";
+import workshopInterior from "@/assets/untitled-00610.jpg";
+import equipmentShowroom from "@/assets/untitled-00574.jpg";
+import compressorUnit from "@/assets/untitled-00452.jpg";
 
 const services = [
   { icon: Snowflake, title: "Compressors & Condensing Units", desc: "GMCC & HITACHI rotary, scroll, and inverter compressors plus monoblock condensing units for every application." },
@@ -33,9 +33,9 @@ const stats = [
 ];
 
 const projects = [
-  { image: projectSupermarket, title: "Naivas Supermarket", category: "Commercial", desc: "Full refrigeration display system installation" },
-  { image: projectWarehouse, title: "KTDA Cold Storage", category: "Industrial", desc: "Large-scale cold storage warehouse facility" },
-  { image: projectHotel, title: "Movenpick Hotel", category: "Hospitality", desc: "Central HVAC system for 200+ room hotel" },
+  { image: showroomEquipment, title: "Showroom Display Units", category: "Commercial", desc: "Condensing units and evaporators ready for deployment" },
+  { image: equipmentShowroom, title: "Equipment Assembly", category: "Industrial", desc: "Large-scale refrigeration equipment preparation" },
+  { image: technicianWork, title: "Compressor Installation", category: "Industrial", desc: "Technician wiring and commissioning condensing units" },
 ];
 
 const fallbackTestimonials = [
@@ -210,9 +210,9 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-2 gap-4"
             >
-              <img src={serviceAircon} alt="Air conditioning units" className="rounded-xl shadow-lg" loading="lazy" />
-              <img src={serviceColdroom} alt="Cold room interior" className="mt-8 rounded-xl shadow-lg" loading="lazy" />
-              <img src={serviceMaintenance} alt="HVAC maintenance" className="col-span-2 h-48 w-full rounded-xl object-cover shadow-lg" loading="lazy" />
+              <img src={condensingUnits} alt="Barcold condensing units in blue and white" className="rounded-xl shadow-lg" loading="lazy" />
+              <img src={compressorUnit} alt="Barcold branded compressor unit" className="mt-8 rounded-xl shadow-lg" loading="lazy" />
+              <img src={workshopInterior} alt="Barcold workshop with refrigeration equipment" className="col-span-2 h-48 w-full rounded-xl object-cover shadow-lg" loading="lazy" />
             </motion.div>
           </div>
         </div>
