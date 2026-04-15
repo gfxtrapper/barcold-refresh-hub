@@ -3,22 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
-import projectSupermarket from "@/assets/project-supermarket.jpg";
-import projectWarehouse from "@/assets/project-warehouse.jpg";
-import projectHotel from "@/assets/project-hotel.jpg";
-import serviceColdroom from "@/assets/service-coldroom.jpg";
-import serviceAircon from "@/assets/service-aircon.jpg";
-import serviceMaintenance from "@/assets/service-maintenance.jpg";
+import showroomDisplay from "@/assets/untitled-00497.jpg";
+import equipmentFloor from "@/assets/untitled-00574.jpg";
+import condensingUnits from "@/assets/untitled-00614.jpg";
+import technicianWork from "@/assets/untitled-00561.jpg";
+import compressorUnit from "@/assets/untitled-00452.jpg";
+import workshopInterior from "@/assets/untitled-00610.jpg";
 
 const categories = ["All", "Commercial", "Industrial", "Hospitality"];
 
 const projects = [
-  { image: projectSupermarket, title: "Naivas Supermarket Chain", category: "Commercial", desc: "Installed refrigeration display systems across 15 branches nationwide." },
-  { image: projectWarehouse, title: "KTDA Cold Storage Facility", category: "Industrial", desc: "Designed and built a 5,000 sq ft cold storage warehouse for tea processing." },
-  { image: projectHotel, title: "Movenpick Hotel", category: "Hospitality", desc: "Central HVAC system installation for the iconic 200+ room hotel in Nairobi." },
-  { image: serviceColdroom, title: "Carrefour Hypermarket", category: "Commercial", desc: "Walk-in cold rooms and display refrigeration for new store openings." },
-  { image: serviceAircon, title: "UAP Tower Offices", category: "Commercial", desc: "VRV air conditioning system for the 33-floor commercial tower." },
-  { image: serviceMaintenance, title: "Bidco Africa Factory", category: "Industrial", desc: "Industrial cooling and process refrigeration for manufacturing plant." },
+  { image: showroomDisplay, title: "Showroom Equipment Display", category: "Commercial", desc: "Full range of condensing units and evaporators prepared for client installations across Kenya." },
+  { image: condensingUnits, title: "Condensing Unit Assembly", category: "Industrial", desc: "Blue and white condensing units in various capacities for cold room applications." },
+  { image: equipmentFloor, title: "Equipment Preparation Floor", category: "Commercial", desc: "Large-scale refrigeration equipment assembly, testing, and quality control." },
+  { image: technicianWork, title: "Compressor Commissioning", category: "Industrial", desc: "Technician wiring and commissioning condensing units for deployment." },
+  { image: compressorUnit, title: "Branded Compressor Units", category: "Commercial", desc: "Barcold-branded monoblock condensing units ready for cold room installation." },
+  { image: workshopInterior, title: "Workshop & Inventory", category: "Industrial", desc: "Parts, accessories, and refrigeration equipment inventory at our Nairobi facility." },
 ];
 
 interface GalleryImage {
