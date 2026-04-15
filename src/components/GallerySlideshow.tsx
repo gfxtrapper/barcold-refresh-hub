@@ -6,12 +6,12 @@ import SectionHeading from "@/components/SectionHeading";
 import { supabase } from "@/integrations/supabase/client";
 
 // Fallback images
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import gallery1 from "@/assets/untitled-00497.jpg";
+import gallery2 from "@/assets/untitled-00574.jpg";
+import gallery3 from "@/assets/untitled-00614.jpg";
+import gallery4 from "@/assets/untitled-00561.jpg";
+import gallery5 from "@/assets/untitled-00577.jpg";
+import gallery6 from "@/assets/untitled-00452.jpg";
 
 interface GallerySlide {
   image: string;
@@ -20,12 +20,12 @@ interface GallerySlide {
 }
 
 const fallbackSlides: GallerySlide[] = [
-  { image: gallery1, title: "Supermarket Refrigeration", caption: "Display cooler installation for a leading retail chain" },
-  { image: gallery2, title: "Industrial Cold Storage", caption: "Large-scale cold room facility for warehousing" },
-  { image: gallery3, title: "Commercial Kitchen Equipment", caption: "Full kitchen ventilation and equipment setup" },
-  { image: gallery4, title: "Rooftop HVAC Systems", caption: "Commercial AC condensing units installation" },
-  { image: gallery5, title: "Walk-in Freezer Installation", caption: "Custom walk-in freezer with condensing unit" },
-  { image: gallery6, title: "Hotel Climate Control", caption: "Centralized HVAC system for hospitality" },
+  { image: gallery1, title: "Showroom Display", caption: "Condensing units and evaporators ready for client delivery" },
+  { image: gallery2, title: "Equipment Assembly Floor", caption: "Large-scale refrigeration equipment preparation and testing" },
+  { image: gallery3, title: "Condensing Unit Range", caption: "Blue and white condensing units in various capacities" },
+  { image: gallery4, title: "Compressor Installation", caption: "Technician wiring and commissioning a condensing unit" },
+  { image: gallery5, title: "Evaporator Fan Detail", caption: "Close-up of a blue evaporator fan assembly" },
+  { image: gallery6, title: "Barcold Branded Unit", caption: "Compressor unit with Barcold Refrigeration branding" },
 ];
 
 const GallerySlideshow = () => {
