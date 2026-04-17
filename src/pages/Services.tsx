@@ -4,10 +4,10 @@ import { Snowflake, Wind, ThermometerSnowflake, Wrench, Building2, ShieldCheck, 
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
-import serviceAircon from "@/assets/untitled-00610.webp";
-import serviceColdroom from "@/assets/untitled-00574.webp";
-import serviceMaintenance from "@/assets/untitled-00647.webp";
-import serviceKitchen from "@/assets/untitled-00639.webp";
+import serviceAircon from "@/assets/product-cassette-ac.webp";
+import serviceColdroom from "@/assets/product-coldroom-branded.webp";
+import serviceMaintenance from "@/assets/team-tech-repair.webp";
+import serviceKitchen from "@/assets/kitchen-stainless-suite.webp";
 import condensingUnits from "@/assets/untitled-00614.webp";
 import compressorUnit from "@/assets/untitled-00452.webp";
 import technicianWork from "@/assets/untitled-00561.webp";
