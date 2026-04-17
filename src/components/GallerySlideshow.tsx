@@ -6,12 +6,12 @@ import SectionHeading from "@/components/SectionHeading";
 import { supabase } from "@/integrations/supabase/client";
 
 // Fallback images
-import gallery1 from "@/assets/untitled-00497.jpg";
-import gallery2 from "@/assets/untitled-00574.jpg";
-import gallery3 from "@/assets/untitled-00614.jpg";
-import gallery4 from "@/assets/untitled-00561.jpg";
-import gallery5 from "@/assets/untitled-00577.jpg";
-import gallery6 from "@/assets/untitled-00452.jpg";
+import gallery1 from "@/assets/untitled-00497.webp";
+import gallery2 from "@/assets/untitled-00574.webp";
+import gallery3 from "@/assets/untitled-00614.webp";
+import gallery4 from "@/assets/untitled-00561.webp";
+import gallery5 from "@/assets/untitled-00577.webp";
+import gallery6 from "@/assets/untitled-00452.webp";
 
 interface GallerySlide {
   image: string;
