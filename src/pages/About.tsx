@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Award, Users, Package, Shield, Target, Eye } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
-import technicianAtWork from "@/assets/untitled-00647.jpg";
-import companySignage from "@/assets/untitled-00649-2.jpg";
-import workshopTeam from "@/assets/untitled-00639.jpg";
-import compressorUnit from "@/assets/untitled-00452.jpg";
+import technicianAtWork from "@/assets/untitled-00647.webp";
+import companySignage from "@/assets/untitled-00649-2.webp";
+import workshopTeam from "@/assets/untitled-00639.webp";
+import compressorUnit from "@/assets/untitled-00452.webp";
 
 // Animation constants
 const slideInFromLeft = {

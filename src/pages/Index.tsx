@@ -8,12 +8,12 @@ import GallerySlideshow from "@/components/GallerySlideshow";
 import { supabase } from "@/integrations/supabase/client";
 import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-refrigeration.jpg";
-import showroomEquipment from "@/assets/untitled-00497.jpg";
-import condensingUnits from "@/assets/untitled-00614.jpg";
-import technicianWork from "@/assets/untitled-00561.jpg";
-import workshopInterior from "@/assets/untitled-00610.jpg";
-import equipmentShowroom from "@/assets/untitled-00574.jpg";
-import compressorUnit from "@/assets/untitled-00452.jpg";
+import showroomEquipment from "@/assets/untitled-00497.webp";
+import condensingUnits from "@/assets/untitled-00614.webp";
+import technicianWork from "@/assets/untitled-00561.webp";
+import workshopInterior from "@/assets/untitled-00610.webp";
+import equipmentShowroom from "@/assets/untitled-00574.webp";
+import compressorUnit from "@/assets/untitled-00452.webp";
 
 const services = [
   { icon: Snowflake, title: "Compressors & Condensing Units", desc: "GMCC & HITACHI rotary, scroll, and inverter compressors plus monoblock condensing units for every application." },

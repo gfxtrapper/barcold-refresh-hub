@@ -4,14 +4,14 @@ import { Snowflake, Wind, ThermometerSnowflake, Wrench, Building2, ShieldCheck, 
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
-import serviceAircon from "@/assets/untitled-00610.jpg";
-import serviceColdroom from "@/assets/untitled-00574.jpg";
-import serviceMaintenance from "@/assets/untitled-00647.jpg";
-import serviceKitchen from "@/assets/untitled-00639.jpg";
-import condensingUnits from "@/assets/untitled-00614.jpg";
-import compressorUnit from "@/assets/untitled-00452.jpg";
-import technicianWork from "@/assets/untitled-00561.jpg";
-import fanCloseup from "@/assets/untitled-00577.jpg";
+import serviceAircon from "@/assets/untitled-00610.webp";
+import serviceColdroom from "@/assets/untitled-00574.webp";
+import serviceMaintenance from "@/assets/untitled-00647.webp";
+import serviceKitchen from "@/assets/untitled-00639.webp";
+import condensingUnits from "@/assets/untitled-00614.webp";
+import compressorUnit from "@/assets/untitled-00452.webp";
+import technicianWork from "@/assets/untitled-00561.webp";
+import fanCloseup from "@/assets/untitled-00577.webp";
 
 const services = [
   { icon: Snowflake, title: "Compressors & Condensing Units", image: compressorUnit, desc: "We supply GMCC and HITACHI compressors — rotary, scroll, inverter, and fixed-speed — alongside variable-temperature monoblock condensing units for cold-room applications ranging from -25 °C to +10 °C.", features: ["GMCC Rotary & Scroll", "HITACHI Inverter & Fixed Speed", "Monoblock condensing units", "R404A / R410A systems"] },
