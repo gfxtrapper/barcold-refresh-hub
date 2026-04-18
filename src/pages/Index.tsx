@@ -7,13 +7,13 @@ import SectionHeading from "@/components/SectionHeading";
 import GallerySlideshow from "@/components/GallerySlideshow";
 import { supabase } from "@/integrations/supabase/client";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/hero-refrigeration.jpg";
-import showroomEquipment from "@/assets/untitled-00497.webp";
-import condensingUnits from "@/assets/untitled-00614.webp";
+import heroImage from "@/assets/hero-rooftop-ac.webp";
+import heroColdroom from "@/assets/hero-coldroom-stocked.webp";
 import technicianWork from "@/assets/untitled-00561.webp";
-import workshopInterior from "@/assets/untitled-00610.webp";
-import equipmentShowroom from "@/assets/untitled-00574.webp";
-import compressorUnit from "@/assets/untitled-00452.webp";
+import teamAssembly from "@/assets/team-tech-assembly.webp";
+import teamWorkshop from "@/assets/team-tech-workshop.webp";
+import productChillerLarge from "@/assets/product-chiller-large.webp";
+import productDisplayChiller from "@/assets/product-display-chiller.webp";
 
 const services = [
   { icon: Snowflake, title: "Compressors & Condensing Units", desc: "GMCC & HITACHI rotary, scroll, and inverter compressors plus monoblock condensing units for every application." },
@@ -33,8 +33,8 @@ const stats = [
 ];
 
 const projects = [
-  { image: showroomEquipment, title: "Showroom Display Units", category: "Commercial", desc: "Condensing units and evaporators ready for deployment" },
-  { image: equipmentShowroom, title: "Equipment Assembly", category: "Industrial", desc: "Large-scale refrigeration equipment preparation" },
+  { image: heroColdroom, title: "Stocked Cold Storage Facility", category: "Industrial", desc: "Fully commissioned cold room running at optimal temperature" },
+  { image: productDisplayChiller, title: "Retail Display Chillers", category: "Commercial", desc: "Glass-door display chillers installed for a retail client" },
   { image: technicianWork, title: "Compressor Installation", category: "Industrial", desc: "Technician wiring and commissioning condensing units" },
 ];
 
@@ -210,9 +210,9 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-2 gap-4"
             >
-              <img src={condensingUnits} alt="Barcold condensing units in blue and white" className="rounded-xl shadow-lg" loading="lazy" />
-              <img src={compressorUnit} alt="Barcold branded compressor unit" className="mt-8 rounded-xl shadow-lg" loading="lazy" />
-              <img src={workshopInterior} alt="Barcold workshop with refrigeration equipment" className="col-span-2 h-48 w-full rounded-xl object-cover shadow-lg" loading="lazy" />
+              <img src={teamAssembly} alt="Barcold technicians assembling refrigeration equipment" className="rounded-xl shadow-lg" loading="lazy" />
+              <img src={productChillerLarge} alt="Large industrial chiller unit by Barcold" className="mt-8 rounded-xl shadow-lg" loading="lazy" />
+              <img src={teamWorkshop} alt="Barcold workshop team at work" className="col-span-2 h-48 w-full rounded-xl object-cover shadow-lg" loading="lazy" />
             </motion.div>
           </div>
         </div>
