@@ -9,15 +9,21 @@ import condensingUnits from "@/assets/untitled-00614.webp";
 import technicianWork from "@/assets/untitled-00561.webp";
 import compressorUnit from "@/assets/untitled-00452.webp";
 import workshopInterior from "@/assets/untitled-00610.webp";
+import multideckFridge from "@/assets/product-multideck-fridge.webp";
+import pizzaOven from "@/assets/product-pizza-oven.webp";
+import kitchenFryer from "@/assets/kitchen-fryer.webp";
 
 const categories = ["All", "Commercial", "Industrial", "Hospitality"];
 
 const projects = [
   { image: showroomDisplay, title: "Showroom Equipment Display", category: "Commercial", desc: "Full range of condensing units and evaporators prepared for client installations across Kenya." },
   { image: condensingUnits, title: "Condensing Unit Assembly", category: "Industrial", desc: "Blue and white condensing units in various capacities for cold room applications." },
+  { image: multideckFridge, title: "Supermarket Multideck Chillers", category: "Commercial", desc: "Open-front multideck refrigerated display cases for supermarket beverage and dairy aisles." },
   { image: equipmentFloor, title: "Equipment Preparation Floor", category: "Commercial", desc: "Large-scale refrigeration equipment assembly, testing, and quality control." },
   { image: technicianWork, title: "Compressor Commissioning", category: "Industrial", desc: "Technician wiring and commissioning condensing units for deployment." },
   { image: compressorUnit, title: "Branded Compressor Units", category: "Commercial", desc: "Barcold-branded monoblock condensing units ready for cold room installation." },
+  { image: pizzaOven, title: "Restaurant Pizza Oven Install", category: "Hospitality", desc: "Commercial deck pizza oven supplied and installed for a Nairobi restaurant kitchen." },
+  { image: kitchenFryer, title: "Commercial Kitchen Fryer Setup", category: "Hospitality", desc: "Heavy-duty deep fryer installation for a high-volume hospitality client." },
   { image: workshopInterior, title: "Workshop & Inventory", category: "Industrial", desc: "Parts, accessories, and refrigeration equipment inventory at our Nairobi facility." },
 ];
 
