@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -22,6 +23,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
+import Lightbox from "@/components/Lightbox";
 import imgCompressors from "@/assets/product-condensing-display.webp";
 import imgMonoblock from "@/assets/product-chiller-rooftop.webp";
 import imgCondensers from "@/assets/product-chiller-large.webp";
