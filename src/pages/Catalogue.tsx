@@ -356,14 +356,24 @@ const Catalogue = () => (
             className="scroll-mt-32"
           >
             {/* Category header */}
-            <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <cat.icon className="h-7 w-7" />
+            <div className="mb-8 grid gap-6 md:grid-cols-[auto_1fr] md:items-center">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <cat.icon className="h-7 w-7" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">{cat.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{cat.subtitle}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold">{cat.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{cat.subtitle}</p>
-              </div>
+              {("image" in cat) && (cat as any).image && (
+                <img
+                  src={(cat as any).image}
+                  alt={cat.title}
+                  loading="lazy"
+                  className="h-48 w-full rounded-xl object-cover shadow-md md:max-w-md md:justify-self-end"
+                />
+              )}
             </div>
 
             {/* Product cards */}
