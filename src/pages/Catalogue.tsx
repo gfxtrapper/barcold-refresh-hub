@@ -22,6 +22,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
+import imgCompressors from "@/assets/product-condensing-display.webp";
+import imgMonoblock from "@/assets/product-chiller-rooftop.webp";
+import imgCondensers from "@/assets/product-chiller-large.webp";
+import imgAcControls from "@/assets/product-cassette-ac.webp";
+import imgKitchen from "@/assets/kitchen-workstations.webp";
 
 /* ------------------------------------------------------------------ */
 /*  CATALOGUE DATA — from Barcold Refrigeration product profile       */
@@ -33,6 +38,7 @@ const categories = [
     icon: Cpu,
     title: "Compressors",
     subtitle: "GMCC & HITACHI — Rotary, Scroll, Inverter, Fixed Speed",
+    image: imgCompressors,
     products: [
       {
         name: "GMCC Rotary Inverter Compressors",
@@ -77,6 +83,7 @@ const categories = [
     icon: Snowflake,
     title: "Cold Room & Monoblock Units",
     subtitle: "Indoor Variable-Temperature Monoblock Condensing Units",
+    image: imgMonoblock,
     products: [
       {
         name: "Wall-Mounted Monoblock (R404A)",
@@ -104,6 +111,7 @@ const categories = [
     icon: Fan,
     title: "Condensers",
     subtitle: "Air-cooled condensers for medium & high temperature applications",
+    image: imgCondensers,
     products: [
       {
         name: "Air-Cooled Condensers",
@@ -164,6 +172,7 @@ const categories = [
     icon: Radio,
     title: "Universal AC Control Systems",
     subtitle: "Boards, remotes & inverter control kits for DC/AC split systems",
+    image: imgAcControls,
     products: [
       {
         name: "Universal AC Control Board Kit",
@@ -259,6 +268,7 @@ const categories = [
     icon: Wind,
     title: "Air Curtains",
     subtitle: "Commercial air curtain solutions for doorways",
+    image: imgKitchen,
     products: [
       {
         name: "Commercial Air Curtains",
@@ -346,14 +356,24 @@ const Catalogue = () => (
             className="scroll-mt-32"
           >
             {/* Category header */}
-            <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <cat.icon className="h-7 w-7" />
+            <div className="mb-8 grid gap-6 md:grid-cols-[auto_1fr] md:items-center">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <cat.icon className="h-7 w-7" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">{cat.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{cat.subtitle}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold">{cat.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{cat.subtitle}</p>
-              </div>
+              {("image" in cat) && (cat as any).image && (
+                <img
+                  src={(cat as any).image}
+                  alt={cat.title}
+                  loading="lazy"
+                  className="h-48 w-full rounded-xl object-cover shadow-md md:max-w-md md:justify-self-end"
+                />
+              )}
             </div>
 
             {/* Product cards */}
