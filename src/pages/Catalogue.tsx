@@ -302,7 +302,9 @@ const item = {
 /*  COMPONENT                                                         */
 /* ------------------------------------------------------------------ */
 
-const Catalogue = () => (
+const Catalogue = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  return (
   <main className="pt-20">
     <SEO
       title="Product Catalogue - Compressors, Cold Rooms & HVAC Equipment"
