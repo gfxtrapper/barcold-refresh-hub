@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -22,6 +23,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
+import Lightbox from "@/components/Lightbox";
 import imgCompressors from "@/assets/product-condensing-display.webp";
 import imgMonoblock from "@/assets/product-chiller-rooftop.webp";
 import imgCondensers from "@/assets/product-chiller-large.webp";
@@ -300,7 +302,9 @@ const item = {
 /*  COMPONENT                                                         */
 /* ------------------------------------------------------------------ */
 
-const Catalogue = () => (
+const Catalogue = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  return (
   <main className="pt-20">
     <SEO
       title="Product Catalogue - Compressors, Cold Rooms & HVAC Equipment"
@@ -367,12 +371,19 @@ const Catalogue = () => (
                 </div>
               </div>
               {("image" in cat) && (cat as any).image && (
-                <img
-                  src={(cat as any).image}
-                  alt={cat.title}
-                  loading="lazy"
-                  className="h-48 w-full rounded-xl object-cover shadow-md md:max-w-md md:justify-self-end"
-                />
+                <button
+                  type="button"
+                  onClick={() => setLightbox({ src: (cat as any).image, alt: cat.title })}
+                  className="block w-full md:max-w-md md:justify-self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl"
+                  aria-label={`View ${cat.title} full-size`}
+                >
+                  <img
+                    src={(cat as any).image}
+                    alt={cat.title}
+                    loading="lazy"
+                    className="h-48 w-full cursor-zoom-in rounded-xl object-cover shadow-md transition-transform duration-300 hover:scale-[1.02]"
+                  />
+                </button>
               )}
             </div>
 
@@ -446,7 +457,14 @@ const Catalogue = () => (
         </div>
       </div>
     </section>
+
+    <Lightbox
+      src={lightbox?.src ?? null}
+      alt={lightbox?.alt}
+      onClose={() => setLightbox(null)}
+    />
   </main>
-);
+  );
+};
 
 export default Catalogue;

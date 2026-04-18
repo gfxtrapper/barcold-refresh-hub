@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
+import Lightbox from "@/components/Lightbox";
 import { supabase } from "@/integrations/supabase/client";
 import showroomDisplay from "@/assets/untitled-00497.webp";
 import equipmentFloor from "@/assets/untitled-00574.webp";
@@ -37,6 +38,7 @@ interface GalleryImage {
 const Projects = () => {
   const [filter, setFilter] = useState("All");
   const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([]);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption?: string } | null>(null);
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   useEffect(() => {
@@ -93,9 +95,14 @@ const Projects = () => {
                   transition={{ duration: 0.3 }}
                   className="group overflow-hidden rounded-xl border bg-card"
                 >
-                  <div className="overflow-hidden">
-                    <img src={project.image} alt={project.title} className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setLightbox({ src: project.image, alt: project.title, caption: project.desc })}
+                    className="block w-full overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    aria-label={`View ${project.title} full-size`}
+                  >
+                    <img src={project.image} alt={project.title} className="h-56 w-full cursor-zoom-in object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  </button>
                   <div className="p-5">
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary">{project.category}</span>
                     <h3 className="mt-1 font-heading text-lg font-semibold">{project.title}</h3>
@@ -123,14 +130,19 @@ const Projects = () => {
                   transition={{ delay: i * 0.05, duration: 0.4 }}
                   className="group overflow-hidden rounded-xl bg-card shadow-sm"
                 >
-                  <div className="overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => setLightbox({ src: img.image_url, alt: img.title, caption: img.caption || undefined })}
+                    className="block w-full overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    aria-label={`View ${img.title} full-size`}
+                  >
                     <img
                       src={img.image_url}
                       alt={img.title}
-                      className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="h-48 w-full cursor-zoom-in object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                  </div>
+                  </button>
                   <div className="p-3">
                     <p className="font-medium text-sm">{img.title}</p>
                     {img.caption && <p className="text-xs text-muted-foreground">{img.caption}</p>}
@@ -141,6 +153,13 @@ const Projects = () => {
           </div>
         </section>
       )}
+
+      <Lightbox
+        src={lightbox?.src ?? null}
+        alt={lightbox?.alt}
+        caption={lightbox?.caption}
+        onClose={() => setLightbox(null)}
+      />
     </main>
   );
 };
