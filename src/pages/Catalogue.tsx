@@ -38,6 +38,7 @@ const categories = [
     icon: Cpu,
     title: "Compressors",
     subtitle: "GMCC & HITACHI — Rotary, Scroll, Inverter, Fixed Speed",
+    image: imgCompressors,
     products: [
       {
         name: "GMCC Rotary Inverter Compressors",
@@ -82,6 +83,7 @@ const categories = [
     icon: Snowflake,
     title: "Cold Room & Monoblock Units",
     subtitle: "Indoor Variable-Temperature Monoblock Condensing Units",
+    image: imgMonoblock,
     products: [
       {
         name: "Wall-Mounted Monoblock (R404A)",
@@ -109,6 +111,7 @@ const categories = [
     icon: Fan,
     title: "Condensers",
     subtitle: "Air-cooled condensers for medium & high temperature applications",
+    image: imgCondensers,
     products: [
       {
         name: "Air-Cooled Condensers",
@@ -169,6 +172,7 @@ const categories = [
     icon: Radio,
     title: "Universal AC Control Systems",
     subtitle: "Boards, remotes & inverter control kits for DC/AC split systems",
+    image: imgAcControls,
     products: [
       {
         name: "Universal AC Control Board Kit",
@@ -264,6 +268,7 @@ const categories = [
     icon: Wind,
     title: "Air Curtains",
     subtitle: "Commercial air curtain solutions for doorways",
+    image: imgKitchen,
     products: [
       {
         name: "Commercial Air Curtains",
