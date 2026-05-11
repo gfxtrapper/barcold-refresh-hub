@@ -52,7 +52,7 @@ const App = () => (
           </Routes>
         </Suspense>
         <Footer />
-        <ChatWidget />
+        <Suspense fallback={null}><ChatWidget /></Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
