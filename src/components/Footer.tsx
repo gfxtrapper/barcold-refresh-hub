@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import barcoldLogo from "@/assets/barcold-logo.png";
 
 const Footer = () => {
@@ -16,11 +16,15 @@ const Footer = () => {
               Kenya's premier refrigeration, air conditioning & HVAC solutions provider since 2019.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="flex h-9 w-9 items-center justify-center rounded-full bg-nav-foreground/10 text-nav-foreground/60 transition-colors hover:bg-primary hover:text-primary-foreground">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+            {[
+              { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=100063805252984" },
+              { Icon: Instagram, href: "https://www.instagram.com/barcoldrefrigeration?igsh=MXJlbG9hcnA4ZWY2Mw==" },
+              { Icon: Linkedin, href: "https://share.google/PxP9u2SV6vfYNGfZi" },
+            ].map(({ Icon, href }, i) => (
+              <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full bg-nav-foreground/10 text-nav-foreground/60 transition-colors hover:bg-primary hover:text-primary-foreground">
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
             </div>
           </div>
 
