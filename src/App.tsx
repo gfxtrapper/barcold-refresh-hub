@@ -8,7 +8,8 @@ import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
-import ChatWidget from "./components/ChatWidget";
+
+const ChatWidget = lazy(() => import("./components/ChatWidget"));
 
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
