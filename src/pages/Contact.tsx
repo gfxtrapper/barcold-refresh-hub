@@ -31,7 +31,7 @@ const Contact = () => {
       />
       <section className="section-padding bg-secondary">
         <div className="container-max">
-          <SectionHeading label="Contact" title="Get In Touch" description="Have a project in mind? Reach out to us for a free consultation and quote." />
+          <SectionHeading as="h1" label="Contact" title="Get In Touch" description="Have a project in mind? Reach out to us for a free consultation and quote." />
         </div>
       </section>
 

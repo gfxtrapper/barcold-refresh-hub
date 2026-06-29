@@ -27,7 +27,7 @@ const Services = () => (
   <main className="pt-20">
     <SEO
       title="Refrigeration, HVAC & AC Services in Kenya"
-      description="Compressors, cold rooms, air conditioning, kitchen equipment, HVAC ventilation & 24/7 maintenance services. Barcold Refrigeration serves commercial & industrial clients across Kenya."
+      description="Compressors, cold rooms, AC, kitchen equipment, HVAC ventilation & 24/7 maintenance for commercial & industrial clients in Kenya."
       canonical="/services"
       jsonLd={{
         "@context": "https://schema.org",
@@ -40,7 +40,7 @@ const Services = () => (
     />
     <section className="section-padding bg-secondary">
       <div className="container-max">
-        <SectionHeading label="Our Services" title="Comprehensive Cooling Solutions" description="End-to-end refrigeration, air conditioning, and HVAC services for commercial, industrial, and residential clients." />
+        <SectionHeading as="h1" label="Our Services" title="Comprehensive Cooling Solutions" description="End-to-end refrigeration, air conditioning, and HVAC services for commercial, industrial, and residential clients." />
       </div>
     </section>
 
