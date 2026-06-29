@@ -20,6 +20,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const RequestQuote = lazy(() => import("./pages/RequestQuote"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
+const MaintenanceChecklist = lazy(() => import("./pages/MaintenanceChecklist"));
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/request-quote" element={<RequestQuote />} />
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/blog/commercial-refrigeration-maintenance-checklist" element={<MaintenanceChecklist />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

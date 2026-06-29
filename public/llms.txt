@@ -14,3 +14,4 @@ Barcold Refrigeration Ltd is a Nairobi-based contractor serving commercial, indu
 - [FAQ](/faq): Common questions about coverage, emergency repairs, warranties, and maintenance contracts.
 - [Contact](/contact): Phone, email, and contact form for free consultations.
 - [Request a Quote](/request-quote): Detailed quote wizard for refrigeration and HVAC projects.
+- [Maintenance Checklist](/blog/commercial-refrigeration-maintenance-checklist): Preventive maintenance and routine inspections guide for commercial refrigeration.
