@@ -1,0 +1,16 @@
+# Barcold Refrigeration Ltd
+
+> Kenya's leading refrigeration, air conditioning, and HVAC services provider since 2019 — supply, installation, and 24/7 maintenance of cold rooms, compressors, AC systems, and commercial kitchen equipment.
+
+Barcold Refrigeration Ltd is a Nairobi-based contractor serving commercial, industrial, and hospitality clients across Kenya and East Africa. Authorized partner for GMCC and HITACHI compressors. Over 500 projects completed.
+
+## Pages
+
+- [Home](/): Overview of Barcold's HVAC and refrigeration solutions.
+- [About](/about): Company background, expertise, and team since 2019.
+- [Services](/services): Refrigeration, air conditioning, HVAC, cold rooms, kitchen equipment, and 24/7 maintenance.
+- [Catalogue](/catalogue): Compressors, condensing units, cold-room systems, AC controls, and HVAC accessories.
+- [Projects](/projects): Portfolio of completed installations across Kenya.
+- [FAQ](/faq): Common questions about coverage, emergency repairs, warranties, and maintenance contracts.
+- [Contact](/contact): Phone, email, and contact form for free consultations.
+- [Request a Quote](/request-quote): Detailed quote wizard for refrigeration and HVAC projects.
