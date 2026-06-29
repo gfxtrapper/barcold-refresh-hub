@@ -10,10 +10,11 @@ interface SEOProps {
 
 const SITE = "https://barcoldrefrigerationltd.co.ke";
 const SITE_NAME = "Barcold Refrigeration Ltd";
+const TITLE_SUFFIX = "Barcold";
 const IMAGE = `${SITE}/barcold-logo.png`;
 
 const SEO = ({ title, description, canonical, type = "website", jsonLd }: SEOProps) => {
-  const fullTitle = `${title} | ${SITE_NAME}`;
+  const fullTitle = `${title} | ${TITLE_SUFFIX}`;
   const url = canonical ? `${SITE}${canonical}` : SITE;
 
   return (
