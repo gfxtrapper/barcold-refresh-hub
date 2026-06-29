@@ -17,7 +17,7 @@ const FAQ = () => (
   <main className="pt-20">
     <SEO
       title="FAQ - HVAC & Refrigeration Questions Answered"
-      description="Frequently asked questions about Barcold Refrigeration's services — areas served, emergency repairs, maintenance contracts, warranties, financing & energy savings."
+      description="Common questions about Barcold's services — areas served, emergency repairs, maintenance contracts, warranties & energy savings."
       canonical="/faq"
       jsonLd={{
         "@context": "https://schema.org",
@@ -31,7 +31,7 @@ const FAQ = () => (
     />
     <section className="section-padding bg-secondary">
       <div className="container-max">
-        <SectionHeading label="FAQ" title="Frequently Asked Questions" description="Find answers to common questions about our services and processes." />
+        <SectionHeading as="h1" label="FAQ" title="Frequently Asked Questions" description="Find answers to common questions about our services and processes." />
       </div>
     </section>
 

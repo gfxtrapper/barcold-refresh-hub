@@ -61,7 +61,7 @@ const Projects = () => {
       />
       <section className="section-padding bg-secondary">
         <div className="container-max">
-          <SectionHeading label="Portfolio" title="Our Projects" description="Explore our track record of successful installations across Kenya." />
+          <SectionHeading as="h1" label="Portfolio" title="Our Projects" description="Explore our track record of successful installations across Kenya." />
         </div>
       </section>
 

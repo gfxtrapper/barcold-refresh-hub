@@ -307,14 +307,15 @@ const Catalogue = () => {
   return (
   <main className="pt-20">
     <SEO
-      title="Product Catalogue - Compressors, Cold Rooms & HVAC Equipment"
-      description="Browse Barcold Refrigeration's full product catalogue — GMCC & HITACHI compressors, condensing units, cold room systems, AC controls & HVAC accessories."
+      title="Catalogue - Compressors, Cold Rooms & HVAC"
+      description="Browse our full catalogue — GMCC & HITACHI compressors, condensing units, cold room systems, AC controls & HVAC accessories."
       canonical="/catalogue"
     />
     {/* Hero */}
     <section className="section-padding bg-secondary">
       <div className="container-max flex flex-col items-center text-center">
         <SectionHeading
+          as="h1"
           label="Product Catalogue"
           title="Equipment & Solutions"
           description="Barcold Refrigeration supplies a comprehensive range of compressors, condensing units, cold-room systems, control systems, HVAC accessories, and spare parts for residential, commercial, and industrial applications."

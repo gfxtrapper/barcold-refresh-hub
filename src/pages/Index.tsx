@@ -69,7 +69,7 @@ const Index = () => {
     <main>
       <SEO
         title="Premier HVAC & Refrigeration Solutions in Kenya"
-        description="Kenya's leading refrigeration, air conditioning & HVAC provider. Cold rooms, compressors, AC systems, kitchen equipment — supply, installation & 24/7 maintenance since 2019."
+        description="Kenya's leading refrigeration, AC & HVAC provider. Cold rooms, compressors, kitchen equipment — supply, installation & 24/7 maintenance."
         canonical="/"
         jsonLd={{
           "@context": "https://schema.org",

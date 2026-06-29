@@ -71,6 +71,7 @@ function HeroSection() {
     <section className="section-padding bg-secondary">
       <div className="container-max">
         <SectionHeading
+          as="h1"
           label="About Us"
           title="Building Trust Through Excellence"
           description="Since 2019, Barcold Refrigeration has been a trusted partner in delivering world-class cooling and HVAC solutions across East Africa."
@@ -169,7 +170,7 @@ const About = () => (
   <main className="pt-20">
     <SEO
       title="About Us - Refrigeration & HVAC Experts Since 2019"
-      description="Learn about Barcold Refrigeration Ltd — Kenya's trusted HVAC & cooling partner since 2019. International supplier with 500+ projects completed across East Africa."
+      description="Barcold Refrigeration Ltd — Kenya's trusted HVAC & cooling partner since 2019. 500+ projects completed across East Africa."
       canonical="/about"
       jsonLd={{
         "@context": "https://schema.org",
