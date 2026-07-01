@@ -19,7 +19,7 @@ const services = [
   { icon: ThermometerSnowflake, title: "Cold Room Systems", image: fanCloseup, desc: "Indoor variable-temperature monoblock units with wall-mounted and top-type options. Storage sizes from 7 m³ to 120 m³, hot-gas defrost, 220 V or 380 V supply.", features: ["Wall-mounted monoblocks", "Top-type monoblocks", "7–120 m³ cold rooms", "Hot-gas defrost"] },
   { icon: Wrench, title: "Parts & Accessories", image: serviceMaintenance, desc: "Thermostats (TAM series, -35 °C to +10 °C), LP/HP/dual pressure controls, condensers, condensate pumps, AC cleaning covers, and anti-vibration mountings.", features: ["TAM thermostats", "LP / HP pressure controls", "Condensate pumps", "Anti-vibration mountings"] },
   { icon: Building2, title: "HVAC & Ventilation", image: serviceAircon, desc: "Full heating, ventilation, and air conditioning solutions for large-scale commercial and industrial facilities — design, engineering, ductwork fabrication, and building automation.", features: ["System design & engineering", "Ductwork fabrication", "Building automation", "Energy management"] },
-  { icon: ShieldCheck, title: "Service & Maintenance", image: technicianWork, desc: "Preventive maintenance contracts, 24/7 emergency repairs, system commissioning, energy audits, retrofits, and operator training programs.", features: ["Preventive maintenance", "24/7 emergency repairs", "Energy audits", "System commissioning"] },
+  { icon: ShieldCheck, title: "Service & Maintenance", image: technicianWork, desc: "Preventive maintenance contracts, 24/7 emergency repairs, system commissioning, energy audits, retrofits, and operator training programs.", features: ["Preventive maintenance", "24/7 emergency repairs", "Energy audits", "System commissioning"], link: { to: "/blog/commercial-refrigeration-maintenance-checklist", label: "Read our maintenance checklist" } },
   { icon: UtensilsCrossed, title: "Kitchen Equipment", image: serviceKitchen, desc: "Supply, installation, and maintenance of commercial kitchen equipment — ovens, fryers, grills, dishwashers, food prep stations, and exhaust systems for restaurants, hotels, and catering businesses.", features: ["Commercial ovens & grills", "Dishwashers & steamers", "Exhaust & ventilation", "Equipment maintenance"] },
 ];
 
@@ -68,6 +68,11 @@ const Services = () => (
                   </li>
                 ))}
               </ul>
+              {service.link && (
+                <Link to={service.link.to} className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                  {service.link.label} <ChevronRight className="h-3.5 w-3.5" />
+                </Link>
+              )}
               <Button className="mt-6" asChild>
                 <Link to="/contact">Request This Service</Link>
               </Button>
