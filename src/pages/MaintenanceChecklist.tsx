@@ -129,6 +129,7 @@ const MaintenanceChecklist = () => (
     />
     <Helmet>
       <meta name="keywords" content="commercial refrigeration repair, commercial refrigeration maintenance checklist, routine inspections, preventive maintenance, cold room maintenance, display chiller maintenance, refrigeration checklist Kenya, Barcold" />
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
     </Helmet>
 
     <article className="bg-background">
