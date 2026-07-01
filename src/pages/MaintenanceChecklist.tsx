@@ -67,6 +67,39 @@ const schedule = [
   },
 ];
 
+const faqs = [
+  {
+    q: "How often should commercial refrigeration be serviced?",
+    a: "Most systems benefit from professional service every 3–6 months. Heavy-use units — supermarket multi-decks, blast freezers, large cold rooms — should be inspected monthly to prevent breakdowns.",
+  },
+  {
+    q: "What does a routine refrigeration inspection include?",
+    a: "Barcold's routine inspections cover temperature verification, condenser and evaporator cleaning, refrigerant checks, electrical testing, safety-control testing, and a written service report.",
+  },
+  {
+    q: "Can preventive maintenance reduce repair costs?",
+    a: "Yes. Catching blocked condensers, worn gaskets, low refrigerant, and loose electrical connections early prevents the compressor failures and emergency callouts that drive up repair bills.",
+  },
+  {
+    q: "Do you offer maintenance contracts in Kenya?",
+    a: "We do. Barcold offers quarterly and monthly maintenance contracts with priority emergency response, discounted parts and labour, and compliance-ready service logs.",
+  },
+  {
+    q: "What signs mean I need immediate commercial refrigeration repair?",
+    a: "Call an engineer right away if you notice short-cycling, rising temperatures, oil stains indicating leaks, heavy ice build-up, burning smells, or repeated breaker trips.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
