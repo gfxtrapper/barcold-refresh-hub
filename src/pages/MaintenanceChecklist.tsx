@@ -83,13 +83,13 @@ const MaintenanceChecklist = () => (
   <>
     <SEO
       title="Commercial Refrigeration Maintenance Checklist"
-      description="A preventive maintenance and routine inspections checklist for commercial refrigeration systems — from Barcold's service engineers in Kenya."
+      description="Reduce commercial refrigeration repair costs with this preventive maintenance checklist. Routine inspections for cold rooms, display chillers and kitchens."
       canonical="/blog/commercial-refrigeration-maintenance-checklist"
       type="article"
       jsonLd={articleJsonLd}
     />
     <Helmet>
-      <meta name="keywords" content="commercial refrigeration repair, routine inspections, preventive maintenance, cold room maintenance, refrigeration checklist Kenya" />
+      <meta name="keywords" content="commercial refrigeration repair, commercial refrigeration maintenance checklist, routine inspections, preventive maintenance, cold room maintenance, display chiller maintenance, refrigeration checklist Kenya, Barcold" />
     </Helmet>
 
     <article className="bg-background">
