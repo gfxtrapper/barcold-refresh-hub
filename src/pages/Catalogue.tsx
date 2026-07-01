@@ -253,6 +253,7 @@ const categories = [
     icon: SprayCan,
     title: "Cleaning & Maintenance",
     subtitle: "AC cleaning covers & maintenance accessories",
+    resource: { label: "Commercial Refrigeration Maintenance Checklist", to: "/blog/commercial-refrigeration-maintenance-checklist" },
     products: [
       {
         name: "AC Cleaning Covers",
@@ -369,6 +370,11 @@ const Catalogue = () => {
                 <div>
                   <h3 className="text-2xl font-bold">{cat.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{cat.subtitle}</p>
+                  {cat.resource && (
+                    <Link to={cat.resource.to} className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                      {cat.resource.label} <ChevronRight className="h-3.5 w-3.5" />
+                    </Link>
+                  )}
                 </div>
               </div>
               {("image" in cat) && (cat as any).image && (
