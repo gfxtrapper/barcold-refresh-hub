@@ -248,6 +248,69 @@ const MaintenanceChecklist = () => (
       </section>
 
       <section className="section-padding">
+        <div className="container-max max-w-5xl">
+          <h2 className="mb-8 text-center text-2xl font-bold md:text-3xl">Related maintenance guides</h2>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              to="/services"
+              className="group rounded-xl border bg-card p-5 transition hover:shadow-md"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Wrench className="h-5 w-5" />
+              </div>
+              <h3 className="font-heading font-semibold group-hover:text-primary">Refrigeration Services</h3>
+              <p className="mt-1 text-sm text-muted-foreground">Installation, repair, and planned maintenance for commercial kitchens and cold stores.</p>
+              <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+                Read more <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
+              </span>
+            </Link>
+
+            <Link
+              to="/catalogue"
+              className="group rounded-xl border bg-card p-5 transition hover:shadow-md"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <BookOpen className="h-5 w-5" />
+              </div>
+              <h3 className="font-heading font-semibold group-hover:text-primary">Equipment Catalogue</h3>
+              <p className="mt-1 text-sm text-muted-foreground">Explore cold rooms, display chillers, pizza ovens, and kitchen workstations.</p>
+              <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+                Browse products <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
+              </span>
+            </Link>
+
+            <Link
+              to="/projects"
+              className="group rounded-xl border bg-card p-5 transition hover:shadow-md"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Building2 className="h-5 w-5" />
+              </div>
+              <h3 className="font-heading font-semibold group-hover:text-primary">Recent Projects</h3>
+              <p className="mt-1 text-sm text-muted-foreground">See how we maintain and install refrigeration systems across Kenya.</p>
+              <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+                View projects <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
+              </span>
+            </Link>
+
+            <Link
+              to="/request-quote"
+              className="group rounded-xl border bg-card p-5 transition hover:shadow-md"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <FileText className="h-5 w-5" />
+              </div>
+              <h3 className="font-heading font-semibold group-hover:text-primary">Maintenance Quote</h3>
+              <p className="mt-1 text-sm text-muted-foreground">Get a free on-site inspection and a tailored preventive maintenance plan.</p>
+              <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+                Request quote <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
         <div className="container-max max-w-4xl rounded-xl bg-primary p-8 text-primary-foreground md:p-12">
           <h2 className="text-2xl font-bold md:text-3xl">Request a Free Quote</h2>
           <p className="mt-3 max-w-2xl opacity-90">
