@@ -229,15 +229,33 @@ const MaintenanceChecklist = () => (
         </div>
       </section>
 
+      <section className="section-padding bg-secondary">
+        <div className="container-max max-w-3xl">
+          <h2 className="mb-8 text-center text-2xl font-bold md:text-3xl">Frequently asked questions</h2>
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border bg-card px-6">
+                <AccordionTrigger className="text-left font-heading font-semibold hover:no-underline">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       <section className="section-padding">
         <div className="container-max max-w-4xl rounded-xl bg-primary p-8 text-primary-foreground md:p-12">
-          <h2 className="text-2xl font-bold md:text-3xl">Book a maintenance audit</h2>
+          <h2 className="text-2xl font-bold md:text-3xl">Request a Free Quote</h2>
           <p className="mt-3 max-w-2xl opacity-90">
             Tell us about your equipment and we'll schedule a free on-site inspection, then send back a tailored preventive maintenance plan.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild size="lg" variant="secondary">
-              <Link to="/request-quote">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/request-quote">Get Your Free Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <Link to="/services">Browse Services</Link>
