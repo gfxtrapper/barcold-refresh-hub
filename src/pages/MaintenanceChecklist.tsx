@@ -66,7 +66,8 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "Commercial Refrigeration Maintenance Checklist",
   description:
-    "A preventive maintenance and routine inspections checklist for commercial refrigeration systems in Kenya, from Barcold's service engineers.",
+    "Reduce commercial refrigeration repair costs with this preventive maintenance checklist. Routine inspections for cold rooms, display chillers and kitchens.",
+  keywords: "commercial refrigeration repair, routine inspections, preventive maintenance, cold room maintenance, refrigeration checklist",
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
   author: { "@type": "Organization", name: "Barcold Refrigeration Ltd" },
