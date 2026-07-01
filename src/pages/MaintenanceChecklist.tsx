@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Calendar, Wrench, AlertTriangle, ShieldCheck, ArrowRight } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 
