@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle2, Calendar, Wrench, AlertTriangle, ShieldCheck, ArrowRight } from "lucide-react";
+import { CheckCircle2, Calendar, Wrench, AlertTriangle, ShieldCheck, ArrowRight, BookOpen, Building2, FileText } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
