@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Calendar, Wrench, AlertTriangle, ShieldCheck, ArrowRight } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 
@@ -61,6 +67,39 @@ const schedule = [
   },
 ];
 
+const faqs = [
+  {
+    q: "How often should commercial refrigeration be serviced?",
+    a: "Most systems benefit from professional service every 3–6 months. Heavy-use units — supermarket multi-decks, blast freezers, large cold rooms — should be inspected monthly to prevent breakdowns.",
+  },
+  {
+    q: "What does a routine refrigeration inspection include?",
+    a: "Barcold's routine inspections cover temperature verification, condenser and evaporator cleaning, refrigerant checks, electrical testing, safety-control testing, and a written service report.",
+  },
+  {
+    q: "Can preventive maintenance reduce repair costs?",
+    a: "Yes. Catching blocked condensers, worn gaskets, low refrigerant, and loose electrical connections early prevents the compressor failures and emergency callouts that drive up repair bills.",
+  },
+  {
+    q: "Do you offer maintenance contracts in Kenya?",
+    a: "We do. Barcold offers quarterly and monthly maintenance contracts with priority emergency response, discounted parts and labour, and compliance-ready service logs.",
+  },
+  {
+    q: "What signs mean I need immediate commercial refrigeration repair?",
+    a: "Call an engineer right away if you notice short-cycling, rising temperatures, oil stains indicating leaks, heavy ice build-up, burning smells, or repeated breaker trips.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -90,6 +129,7 @@ const MaintenanceChecklist = () => (
     />
     <Helmet>
       <meta name="keywords" content="commercial refrigeration repair, commercial refrigeration maintenance checklist, routine inspections, preventive maintenance, cold room maintenance, display chiller maintenance, refrigeration checklist Kenya, Barcold" />
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
     </Helmet>
 
     <article className="bg-background">
@@ -189,15 +229,33 @@ const MaintenanceChecklist = () => (
         </div>
       </section>
 
+      <section className="section-padding bg-secondary">
+        <div className="container-max max-w-3xl">
+          <h2 className="mb-8 text-center text-2xl font-bold md:text-3xl">Frequently asked questions</h2>
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border bg-card px-6">
+                <AccordionTrigger className="text-left font-heading font-semibold hover:no-underline">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       <section className="section-padding">
         <div className="container-max max-w-4xl rounded-xl bg-primary p-8 text-primary-foreground md:p-12">
-          <h2 className="text-2xl font-bold md:text-3xl">Book a maintenance audit</h2>
+          <h2 className="text-2xl font-bold md:text-3xl">Request a Free Quote</h2>
           <p className="mt-3 max-w-2xl opacity-90">
             Tell us about your equipment and we'll schedule a free on-site inspection, then send back a tailored preventive maintenance plan.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild size="lg" variant="secondary">
-              <Link to="/request-quote">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/request-quote">Get Your Free Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <Link to="/services">Browse Services</Link>
