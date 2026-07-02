@@ -40,8 +40,36 @@ const Services = () => (
         "url": "https://barcoldrefrigerationltd.co.ke/services"
       }}
     />
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://barcoldrefrigerationltd.co.ke/" },
+            { "@type": "ListItem", position: 2, name: "Services", item: "https://barcoldrefrigerationltd.co.ke/services" }
+          ]
+        })}
+      </script>
+    </Helmet>
     <section className="section-padding bg-secondary">
       <div className="container-max">
+        <Breadcrumb className="mb-6">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild className="inline-flex items-center gap-2">
+                <Link to="/">
+                  <Home className="h-4 w-4" />
+                  Home
+                </Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Services</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
         <SectionHeading as="h1" label="Our Services" title="Comprehensive Cooling Solutions" description="End-to-end refrigeration, air conditioning, and HVAC services for commercial, industrial, and residential clients." />
       </div>
     </section>
