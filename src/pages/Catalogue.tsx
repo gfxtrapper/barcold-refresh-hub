@@ -253,7 +253,7 @@ const categories = [
     icon: SprayCan,
     title: "Cleaning & Maintenance",
     subtitle: "AC cleaning covers & maintenance accessories",
-    resource: { label: "Commercial Refrigeration Maintenance Checklist", to: "/blog/commercial-refrigeration-maintenance-checklist" },
+    resource: { label: "Commercial refrigeration repair & routine inspections checklist", to: "/blog/commercial-refrigeration-maintenance-checklist" },
     products: [
       {
         name: "AC Cleaning Covers",

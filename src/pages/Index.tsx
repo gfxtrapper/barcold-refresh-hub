@@ -21,7 +21,7 @@ const services = [
   { icon: ThermometerSnowflake, title: "Cold Room Solutions", desc: "Variable-temperature monoblock units, condensers, and cold-room systems from 7 m³ to 120 m³." },
   { icon: Wrench, title: "Parts & Accessories", desc: "Thermostats, pressure controls, brackets, anti-vibration mountings, and condensate pumps." },
   { icon: Building2, title: "HVAC & Ventilation", desc: "Complete heating, ventilation, and air conditioning solutions for commercial and industrial facilities." },
-  { icon: ShieldCheck, title: "Service & Maintenance", desc: "Preventive maintenance, 24/7 emergency repairs, energy audits, and system commissioning.", link: { to: "/blog/commercial-refrigeration-maintenance-checklist", label: "Read our maintenance checklist" } },
+  { icon: ShieldCheck, title: "Service & Maintenance", desc: "Preventive maintenance, 24/7 emergency repairs, energy audits, and system commissioning.", link: { to: "/blog/commercial-refrigeration-maintenance-checklist", label: "Commercial refrigeration repair & routine inspections checklist" } },
   { icon: UtensilsCrossed, title: "Kitchen Equipment", desc: "Commercial kitchen equipment supply, installation, and maintenance for restaurants, hotels, and catering facilities." },
 ];
 
