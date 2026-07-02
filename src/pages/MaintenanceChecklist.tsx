@@ -174,7 +174,6 @@ const MaintenanceChecklist = () => {
         company: form.company || null,
         services: ["Maintenance & Repairs"],
         project_description: form.projectDescription,
-        source_page: "/blog/commercial-refrigeration-maintenance-checklist",
       });
       if (error) throw error;
       supabase.functions.invoke("notify-quote", {
