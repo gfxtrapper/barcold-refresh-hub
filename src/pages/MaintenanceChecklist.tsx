@@ -1,14 +1,21 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle2, Calendar, Wrench, AlertTriangle, ShieldCheck, ArrowRight, BookOpen, Building2, FileText } from "lucide-react";
+import { z } from "zod";
+import { CheckCircle2, Calendar, Wrench, AlertTriangle, ShieldCheck, ArrowRight, BookOpen, Building2, FileText, Send, Loader2 } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import SEO from "@/components/SEO";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+
 
 const SITE = "https://barcoldrefrigerationltd.co.ke";
 const URL = `${SITE}/blog/commercial-refrigeration-maintenance-checklist`;
