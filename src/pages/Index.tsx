@@ -86,6 +86,17 @@ const Index = () => {
           "knowsAbout": ["Refrigeration", "HVAC", "Cold Room Installation", "Air Conditioning", "Commercial Refrigeration", "Kitchen Equipment"]
         }}
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://barcoldrefrigerationltd.co.ke/" }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-center overflow-hidden">
         <div className="absolute inset-0">
