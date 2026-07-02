@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import {
   Download,
@@ -17,8 +18,10 @@ import {
   Cpu,
   Thermometer,
   Radio,
+  Home,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
@@ -312,9 +315,37 @@ const Catalogue = () => {
       description="Browse our full catalogue — GMCC & HITACHI compressors, condensing units, cold room systems, AC controls & HVAC accessories."
       canonical="/catalogue"
     />
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://barcoldrefrigerationltd.co.ke/" },
+            { "@type": "ListItem", position: 2, name: "Catalogue", item: "https://barcoldrefrigerationltd.co.ke/catalogue" }
+          ]
+        })}
+      </script>
+    </Helmet>
     {/* Hero */}
     <section className="section-padding bg-secondary">
       <div className="container-max flex flex-col items-center text-center">
+        <Breadcrumb className="mb-6">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild className="inline-flex items-center gap-2">
+                <Link to="/">
+                  <Home className="h-4 w-4" />
+                  Home
+                </Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Catalogue</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
         <SectionHeading
           as="h1"
           label="Product Catalogue"
