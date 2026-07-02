@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star, UtensilsCrossed } from "lucide-react";
+import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star, UtensilsCrossed, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import SectionHeading from "@/components/SectionHeading";
 import GallerySlideshow from "@/components/GallerySlideshow";
 import { supabase } from "@/integrations/supabase/client";
