@@ -132,6 +132,22 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Breadcrumb */}
+      <section className="border-b bg-background py-4">
+        <div className="container-max px-4 md:px-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbPage className="inline-flex items-center gap-2">
+                  <Home className="h-4 w-4" />
+                  Home
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="bg-primary">
         <div className="container-max grid grid-cols-2 gap-6 px-4 py-10 md:grid-cols-4 md:px-8">
