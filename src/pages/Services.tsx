@@ -99,9 +99,14 @@ const Services = () => (
                 ))}
               </ul>
               {service.link && (
-                <Link to={service.link.to} className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-                  {service.link.label} <ChevronRight className="h-3.5 w-3.5" />
-                </Link>
+                <div className="mt-4 flex flex-col items-start gap-2">
+                  <Link to={service.link.to} className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                    {service.link.label} <ChevronRight className="h-3.5 w-3.5" />
+                  </Link>
+                  <Link to={service.link.to} className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                    Read our commercial refrigeration repair guide <ChevronRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
               )}
               <Button className="mt-6" asChild>
                 <Link to="/contact">Request This Service</Link>
