@@ -39,9 +39,10 @@
     <loc>https://barcoldrefrigerationltd.co.ke/request-quote</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://barcoldrefrigerationltd.co.ke/blog/commercial-refrigeration-maintenance-checklist</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
-  </url>
+  <url>
 </urlset>
