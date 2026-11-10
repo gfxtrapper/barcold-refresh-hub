@@ -342,6 +342,12 @@ const Index = () => {
             <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
               Contact us today for a free consultation and quote. Our team is ready to help with your refrigeration and HVAC needs.
             </p>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-primary-foreground/80">
+              For practical upkeep advice, see our{" "}
+              <Link to="/blog/commercial-refrigeration-maintenance-checklist" className="font-medium text-primary-foreground underline underline-offset-4 hover:opacity-80">
+                routine inspections checklist for commercial refrigeration
+              </Link>.
+            </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/contact">Request a Quote</Link>

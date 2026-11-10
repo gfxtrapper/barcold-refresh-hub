@@ -402,9 +402,14 @@ const Catalogue = () => {
                   <h3 className="text-2xl font-bold">{cat.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{cat.subtitle}</p>
                   {cat.resource && (
-                    <Link to={cat.resource.to} className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-                      {cat.resource.label} <ChevronRight className="h-3.5 w-3.5" />
-                    </Link>
+                    <div className="mt-2 flex flex-col items-start gap-2">
+                      <Link to={cat.resource.to} className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                        {cat.resource.label} <ChevronRight className="h-3.5 w-3.5" />
+                      </Link>
+                      <Link to={cat.resource.to} className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                        Routine inspections for commercial refrigeration equipment <ChevronRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
                   )}
                 </div>
               </div>
