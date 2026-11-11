@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Snowflake, Wind, Wrench, Building2, ThermometerSnowflake, ShieldCheck, Clock, Award, ChevronRight, Star, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import SectionHeading from "@/components/SectionHeading";
 import GallerySlideshow from "@/components/GallerySlideshow";
 import { supabase } from "@/integrations/supabase/client";
@@ -86,17 +84,6 @@ const Index = () => {
           "knowsAbout": ["Refrigeration", "HVAC", "Cold Room Installation", "Air Conditioning", "Commercial Refrigeration", "Kitchen Equipment"]
         }}
       />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://barcoldrefrigerationltd.co.ke/" }
-            ]
-          })}
-        </script>
-      </Helmet>
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -129,19 +116,6 @@ const Index = () => {
               </Button>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Breadcrumb */}
-      <section className="border-b bg-background py-4">
-        <div className="container-max px-4 md:px-8">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbPage>Home</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
         </div>
       </section>
 
